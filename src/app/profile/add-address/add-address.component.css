@@ -1,0 +1,80 @@
+.add-address {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.addr-title h2 {
+    font-size: 25px;
+    font-family: "Poppins-SemiBold";
+}
+
+.form-cont p {
+    font-family: "Poppins-Regular";
+    color: #ffa800;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+.form-cont input {
+    border: none;
+    border-bottom: 1px solid #979797;
+    width: 100%;
+}
+
+.form-cont {
+    margin-bottom: 20px;
+}
+
+.profile-save {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+    margin-top: 40px !important;
+}
+
+.profile-save button {
+    border: none;
+    width: 150px;
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background-color: #ffc542;
+    color: #000000;
+}
+
+.cancle-btn {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    padding-left: 30px;
+    font-size: 12px;
+    color: #e64e5d;
+}
+
+.ng-select span {
+    /* padding: 5px; */
+    font-family: "Poppins-Medium";
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 100 !important;
+}
+.form-cont ng-select{
+    margin-bottom: -25px;
+}
+
+@media only screen and (max-width: 415px) {
+    .cancle-btn {
+        margin-right: 10px;
+    }
+}

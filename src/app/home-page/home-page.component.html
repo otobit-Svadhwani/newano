@@ -1,0 +1,324 @@
+<section class="ano-banner">
+    <div class="home-banner" *ngFor="let d of display" style="background-image: url({{d.image}});">
+        <div class="row">
+            <div class="col-md-5">
+                <!-- <img class="img-fluid" src="{{d.image}}" alt=""> -->
+            </div>
+            <div class="col-md-7">
+                <div class="banner-detail">
+                    <h2>{{d.heading}}</h2>
+                    <p>{{d.content}}</p>
+                    <div style="padding-top: 9px;">
+                        <!-- <button class="repair-btn" (click)="call()">{{d.buttonContent}}</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="select-dervice-car">
+            <carousel [height]="190" [cellWidth]="278" [arrowsOutside]="true">
+                <div class="carousel-cell service-box" *ngFor="let s of slider" (click)="OnChange(s)">
+                    <img src="{{s.image}}" alt="{{s.alt}}">
+                    <h2>{{s.heading}}</h2>
+                </div>
+            </carousel>
+        </div>
+    </div>
+    <div class="container">
+        <div class="extra-detail padding">
+            <h1> Cell Phone Repair Service in USA </h1>
+            <p>Do you have a faulty, broken, damaged, or shattered mobile/laptop? Or looking for inexpensive trending accessories for your device? </p>
+        </div>
+
+        <div>
+            <div class="howitwork-title">
+                <h2>Welcome To Fixxi </h2>
+            </div>
+            <p>Fixxi is the safest choice for sell, buy, repair or accessorize your smartphone or laptop in Arizona!! Millions of Americans in Arizona visit Fixxi to repair their mobiles and laptops. We have specially trained technicians who can repair or
+                upgrade all commonly broken parts of the most popular laptop and mobile brands. We worry about the damage to your phones, so if your smartphone screen has broken, your machine has crashed, or you have incurred liquid damage, we at Fixxi
+                will let your digital world on its way as soon as possible!  </p>
+
+            <h2>Expert Phone Repair Service in USA</h2>
+            <p>You'll be amazed by our easier and Expert Cell Phone Repair Service in USA. In just a few hours of approaching us the Mobile Phone Repair in USA, you will get fast and credible repair services for your phones and laptops! </p>
+
+        </div>
+
+        <div class="howitwork padding">
+            <div class="howitwork-title">
+                <h3>How it works</h3>
+            </div>
+            <div class="servicelist">
+                <div class="service-detail">
+                    <div class="service-detail-img">
+                        <img class="img-fluid" src="./../../assets/images/select device.png" alt="">
+                    </div>
+                    <div class="service-detail-img-detail">
+                        <h4>Sign-up to get started</h4>
+                        <p>Sign-up or create an account to get hassle free services next to your door step.  </p>
+                    </div>
+                </div>
+
+                <div class="service-detail">
+                    <div class="service-detail-img">
+                        <img class="img-fluid" src="../../assets/images/repair.png" alt="">
+                    </div>
+                    <div class="service-detail-img-detail">
+                        <h4>Schedule the repair</h4>
+                        <p>Tap on the "Book Repair" button, select your device and tell us what's wrong with it. You can easily choose the precise location and time for your repairs.</p>
+                    </div>
+                </div>
+
+                <div class="service-detail">
+                    <div class="service-detail-img">
+                        <img class="img-fluid" src="../../assets/images/getback.png" alt="">
+                    </div>
+                    <div class="service-detail-img-detail">
+                        <h4>Repair</h4>
+                        <p>When we visit, based on the complexity of the repair, we will either fix the unit on the spot or send it to our workshop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="whyus">
+            <div class="whyus-title">
+                <h3>Why Us</h3>
+            </div>
+            <div class="desktop whyusline">
+                <img class="desktop" src="../../assets/images/whyusline.png" alt="">
+            </div>
+            <div class="whyuslist">
+                <div class="listdisplay">
+                    <div class="whyus-detail">
+                        <div class="whyimg">
+                            <img src="../../assets/images/whyus1.svg" alt="" style="margin: 0 10px 15px 10px;">
+                            <!-- <img class="desktop" src="../../assets/images/Line1.svg" alt=""> -->
+                        </div>
+                        <div class="whyuslist-detailll">
+                            <h4>One Stop Solution</h4>
+                            <p>Fixxi is the one stop solution that excels in sell, buy, repair or accessorize your smartphone or laptop.</p>
+                        </div>
+                    </div>
+                    <div class="whyus-detail">
+                        <div class="whyimg">
+                            <img src="../../assets/images/whyus2.svg" alt="" style="margin: 0 10px 15px 10px;">
+                            <!-- <img class="desktop" src="../../assets/images/Line2.svg" alt=""> -->
+                        </div>
+                        <div class="whyuslist-detailll">
+                            <h4>Hassle-Free & Quick</h4>
+                            <p>We specialize in providing fast turnaround repairs for smartphones and laptops at your place or you can send in.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="listdisplay">
+                    <div class="whyus-detail">
+                        <div class="whyimg">
+                            <img src="../../assets/images/whyus3.svg" alt="" style="margin: 0 10px 15px 10px;">
+                            <!-- <img class="desktop" src="../../assets/images/Line3.svg" alt=""> -->
+                        </div>
+                        <div class="whyuslist-detailll">
+                            <h4>Competent Pricing</h4>
+                            <p>The majority of phone/laptop issues can be resolved without keeping a hole in your pockets. We believe in a “no fix-no charge” policy. </p>
+                        </div>
+                    </div>
+                    <div class="whyus-detail">
+                        <div class="whyimg">
+                            <img src="../../assets/images/whyus4.svg" alt="" style="margin: 0 0 15px 0;">
+                        </div>
+                        <div class="whyuslist-detailll">
+                            <h4>Ensured Safety</h4>
+                            <p>Our expert technicians ensure the safest hands for your device using only the genuine components. We never request passwords, so your data and personal details are safe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aboutus">
+            <div class="row">
+                <div class="aboutdetail col-md-6 ">
+                    <div class="about-title">
+                        <h3>About Us</h3>
+                    </div>
+                    <p>Fixxi was designed with the aim of providing high-quality, fast and credible Mobile phone and laptop repair services in Manchester. Since our business has gradually expanded, you should be delighted with our outstanding customer service
+                        while you join hands with us. </p>
+                    <p>Fixxi is entirely loaded with credible and verified phone/laptop parts. Only the latest equipment and tools are used by our team of highly trained and safety technicians. Almost all of our customers benefit from our expertise, competitive
+                        pricing, fast turnaround, and masterful services in this sector. We have the most latest authorized supplies, which allows us to test and repair the systems to the core. You will mention the commitment in our job as well as the
+                        expertise in our hands.</p>
+                    <p>Fixxi is committed to providing excellent support. We are not only proud of the support we provide our clients, but we are also very proud of our technicians who work for us. We believe in empowering people and providing them with
+                        opportunities. To that end, we inspire our technicians to take command of their daily work. They have control of when and when they serve. </p>
+                    <button (click)=about()>Read More >></button>
+                </div>
+                <div class="about-img col-md-6">
+                    <div class="about-img-12">
+                        <img class="img-fluid about-img-1 anim_three" src="../../assets/images/about/Image 1.png" alt="Cell Phone Repair in USA">
+                        <img class="img-fluid about-img-2 anim_four" src="../../assets/images/about/Image 2.png" alt="Mobile Phone Repair in USA">
+                    </div>
+                    <div class="about-img-34">
+                        <img class="img-fluid about-img-3 anim_four" src="../../assets/images/about/Image 3.png" alt="Fast Cell Phone Repair in USA">
+                        <img class="img-fluid about-img-4 anim_seven" src="../../assets/images/about/Image 4.png" alt="Mobile Phone Repair">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-driver driver-bg" style="background: url(../../assets/images/stearing\ wheel.svg);">
+        <div class="container">
+            <div class="row">
+                <div class="driverdetail col-md-6">
+                    <div class="driver-title">
+                        <h3>Signup As a Driver</h3>
+                        <p>Fixxi offers opportunities for all types of drivers, including those hunting for part-time employment. It is easy to register to deliver with Fixxi. Fill out the form below and get register yourself as a delivery driver.</p>
+                    </div>
+                </div>
+                <div class="requestform col-md-6">
+                    <form [formGroup]="driveForm">
+                        <div class="name">
+                            <input type="text" formControlName="first_name" name="first" id="first" placeholder="First Name">
+                            <input type="text" formControlName="last_name" name="last" id="last" placeholder="Last Name">
+                        </div>
+                        <div class="contact">
+                            <input type="text" formControlName="email" name="email" id="email" placeholder="Email">
+                            <input type="text" maxlength="13" formControlName="mobile_number" required onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" name="mobile" id="mobile" placeholder="Mobile No">
+                        </div>
+                        <div class="text-dangerr" *ngIf="invalidData">
+                            Invalid Data
+                        </div>
+                        <div class="req-btn">
+                            <button (click)="DriverReq()">Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="client">
+        <div class="container">
+            <div class="client-title">
+                <h3>Our Clients Speak</h3>
+                <p>We have been working with clients around the world</p>
+            </div>
+            <div class="client-review">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="review">
+                            <div class="review-blog">
+                                <h4>Efficient Collaborating</h4>
+                                <p>Fast and high-quality service! I dropped off my mobile, and they finished it in an hour. My device is as good as new, thanks to Fixxi’s installation of a new software and screen protector. I'd rather go to these guys instead
+                                    of other random repair shops. I would appreciate them for price transparency and excellent services!</p>
+                            </div>
+                            <div class="reviewer">
+                                <img src="../../assets/images/client.svg" alt="">
+                                <h5>- Jacob</h5>
+                                <p>CEO at ABC Corporation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="review">
+                            <div class="review-blog">
+                                <h4>Efficient Collaborating</h4>
+                                <p>I suddenly turned onto Fixxi, without asking if they were functional, but my laptop was dying and I was worried. A smiling face welcomed me and told me that my cracked display could be repaired in few hours. They also updated
+                                    the system software as the previous version was getting old. After a day, my laptop is working smoother than ever. Fixxi is amazing, fast, easy, and convenient. Excellent job guys! Would recommend ever after!</p>
+                            </div>
+                            <div class="reviewer">
+                                <img src="../../assets/images/client.svg" alt="">
+                                <h5>- Olivia</h5>
+                                <p>CEO at ABC Corporation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="review">
+                            <div class="review-blog">
+                                <h4>Efficient Collaborating</h4>
+                                <p>Fixxi restored full functionality on my Apple device in less than a day that too at my place. They were able to immediately resolve my screen problems and reassure me that the handset had plenty of longevity in it. I saved
+                                    a lot of money and hours as a result of this. They have my future business without even a doubt.</p>
+                            </div>
+                            <div class="reviewer">
+                                <img src="../../assets/images/client.svg" alt="">
+                                <h5>- Jack Marvel</h5>
+                                <p>CEO at ABC Corporation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="count">
+        <div class="container">
+            <div class="count-head">
+                <h3>Some count that matters</h3>
+                <h5>US First and Largest Online Mobile Expert</h5>
+            </div>
+            <div class="counts">
+                <div class="listdisplay">
+                    <div class="hexagon">
+                        <div class="hexagonetext">
+                            <h3>600+</h3>
+                            <h4>Happy Users</h4>
+                        </div>
+                    </div>
+
+                    <div class="hexagon">
+                        <div class="hexagonetext">
+                            <h3>540+</h3>
+                            <h4>Devices repaired</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="listdisplay">
+                    <div class="hexagon">
+                        <div class="hexagonetext">
+                            <h3>500</h3>
+                            <h4>Dedicated Vendors</h4>
+                        </div>
+                    </div>
+
+                    <div class="hexagon">
+                        <div class="hexagonetext">
+                            <h3>4.6+</h3>
+                            <h4>User rating</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="experience-detail">
+                        <h3>Get Service from your mobile</h3>
+                        <p>Sign-up and get a free quote for your fix!! </p>
+                        <p>Just download the Fixxi app on your device. Schedule an appointment online at your desired location and time. If you are not nearby our branch, you can get your device repaired by dropping it at us! Get drop services just by logging
+                            in. So why to wait?</p>
+                        <h4>Get the App</h4>
+                        <div class="store">
+                            <button><img src="../../assets/images/Google Play Badge.svg" alt=""></button>
+                            <button><img src="../../assets/images/App Store Badge.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="experience-img1">
+                        <img class="img-fluid" src="../../assets/images/Screen1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="experience-img2">
+                        <img class="img-fluid" src="../../assets/images/Screen2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

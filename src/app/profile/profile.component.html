@@ -1,0 +1,41 @@
+<section class="profile">
+    <div class="container">
+        <div class="user-profile">
+            <div class="user-profile-img">
+                <img src="../../assets/images/shop/photo-1570295999919-56ceb5ecca61.jfif" alt="">
+            </div>
+            <div class="user-profile-detail" *ngFor="let info of Details">
+                <div class="profile-detail">
+                    <h2>{{info.fname}} {{info.lname}}</h2>
+                    <button>
+                        <img (click)="editName()" src="../../assets/images/edit.svg" alt="">
+                    </button>
+                </div>
+                <p>+1{{info.mobileNumber}}</p>
+                <div class="gmail-chag-pass">
+                    <p>{{info.email}}</p>
+                    <h6 (click)="Changepsw()">Change Password</h6>
+                </div>
+            </div>
+        </div>
+        <hr class="profile-line">
+        <div class="user-add">
+            <h3>My Address</h3>
+            <hr class="address-line">
+            <div class="profile-add">
+                <div class="user-loaction" *ngFor="let info of defaultAddress">
+                    <img src="../../assets/images/profile/input_location.svg" alt="">
+                    <p>{{info.addressLine}} {{info.city}} {{info.state}} {{info.zipCode}}</p>
+                </div>
+                <button>
+                    <img src="../../assets/images/edit-yellow.svg" alt="">
+                    <p (click)="checkAddress()">View More</p>
+                </button>
+            </div>
+        </div>
+        <div class="service-review">
+            <h2>My Services & My Reviews</h2>
+            <button (click)="checkOrder()">View all</button>
+        </div>
+    </div>
+</section>

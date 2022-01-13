@@ -1,0 +1,169 @@
+<section class="checkout">
+    <div class="container">
+        <div class="row" *ngFor="let o of order">
+            <div class="col-md-6">
+                <!-- <div class="booking-detail">
+                    <div class="booking-shop">
+                        <div class="booking-shop-img">
+                            <img src="../../assets/images/checkout/shopimg.png" alt="">
+                            <h2>{{o.shop.shopName}}</h2>
+                        </div>
+                        <div class="booking-sho-price">
+                            <p>Total</p>
+                            <h2>$ {{o.Total_Price}}</h2>
+                        </div>
+                    </div>
+                    <div class="booking-device">
+                        <div class="booking-device-box">
+                            <p>Device #: <span>{{totaldevice}}</span></p>
+                            <p>Category: <span>Repair</span></p>
+                            <p>Services: <span>Repair</span></p>
+                            <div class="booking-date">
+                                <p>Expected Date</p>
+                                <h2>December 21, 2020+</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="product-details">
+                    <h2>Products Details</h2>
+                    <hr>
+                    <div class="product-fee">
+                        <div class="product-name">
+                            <p>Base fee</p>
+                            <p>ANO’s Commission Fee: 20%</p>
+                            <p>ShopCommissionFees</p>
+                            <p>Repair Charge</p>
+                            <p>Delivery</p>
+                            <p>Discount</p>
+
+                        </div>
+                        <div class="product-price">
+                            <p>${{grandTotalOfBaseFees}}</p>
+                            <p>${{grandTotalOfANOCommissionFees}}</p>
+                            <p>${{grandTotalOfShopCommissionFees}}</p>
+                            <p>${{grandTotalOfPartsFees}}</p>
+                            <p>${{grandTotalOfdelivery}}</p>
+                            <p><span>-</span>${{grandTotalOfdelivery}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="total-product">
+                        <h2>Total Payment</h2>
+                        <h3>${{o.TotalAmountToPay}}</h3>
+                    </div>
+                    <hr>
+                    <div class="download-invoice">
+                        <button>
+                            <img src="../../../assets/images/checkout/file_pdf.svg" alt="">
+                        <p>Invoice Download</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="destroy-system">
+                    <div class="destroy-system-box" *ngFor="let device of o.details">
+                        <div class="destroy-system-img">
+                            <img src="../../assets/images/checkout/destroy phone.png" alt="">
+                        </div>
+                        <div class="destroy-system-det">
+                            <h2>{{device.modelName}}</h2>
+                            <h2>$ {{device.price}}</h2>
+                            <p>{{device.problem_name}}</p>
+                        </div>
+                    </div>
+                    <!-- <div class="destroy-system-box">
+                        <div class="destroy-system-img">
+                            <img src="../../assets/images/checkout/destroy phone.png" alt="">
+                        </div>
+                        <div class="destroy-system-det">
+                            <h2>$ 65.22</h2>
+                            <p>Screen Replacement</p>
+                        </div>
+                    </div>
+                    <div class="destroy-system-box">
+                        <div class="destroy-system-img">
+                            <img src="../../assets/images/checkout/destroy phone.png" alt="">
+                        </div>
+                        <div class="destroy-system-det">
+                            <h2>$ 65.22</h2>
+                            <p>Screen Replacement</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="deliver-system">
+                    <div class="deliver-cab">
+                        <label for="deliver-cab">
+                            <div>
+                                <img src="../../assets/images/checkout/pickup.svg" alt="">
+                            </div>
+                            <div style="width: 100%;">
+                                <h2>{{o.pickupLocation}}</h2>
+                                <hr>
+                                <h2>{{o.dropLocation}}</h2>
+                            </div>
+                        </label>
+                    </div>
+                    <p>Delivered on {{o.repairedDate}}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="shop-detail">
+                    <div class="shop-infoo">
+                        <img src="{{o.shop.image}}" alt="">
+                        <h2>{{o.shop.shopName}}</h2>
+                        <hr>
+                        <div class="detail-name2">
+                            <div class="dis-f">
+                                <img src="../../assets/images/location.svg" alt="">
+                                <p>{{o.shop.addressLine1}} {{o.shop.addressLine2}} {{o.shop.zipCode}}</p>
+                            </div>
+                            <div class="dis-f">
+                                <img src="../../assets/images/Call.svg" alt="">
+                                <p>+1{{o.shop.mobileNumber}}</p>
+                            </div>
+                        </div>
+                        <div class="need-help">
+                            <button onclick="help()">Need help?</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <div class="reviews-title">
+                        <h2>Review</h2>
+                    </div>
+                    <div class="user-rev">
+                        <div class="revi-box" *ngFor="let r of o.ratings">
+                            <div class="revi-img">
+                                <img src="../../../assets/images/shop/user-profile.png" alt="">
+                            </div>
+                            <div class="revi-detail">
+                                <h2>{{r.user_name}}</h2>
+                                <p>{{r.title}}</p>
+                                <p>{{r.commet}}</p>
+                                <div class="star-like">
+                                    <div class="cont">
+                                        <ngx-star-rating class="rating" [(ngModel)]="r.rating" [id]="'rating3'" [disabled]="true"></ngx-star-rating>
+                                    </div>
+                                    <!-- <div>
+                                        <img src="../../../assets/images/shop/like-dislike.svg" alt="">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="addcomment">
+                        <div class="addstar">
+                            <div class="">
+                                <ngx-star-rating class="rating" [(ngModel)]="rating0" [id]="'rating0'" [disabled]="true"></ngx-star-rating>
+                            </div>
+                        </div>
+                        <div class="feedback-input">
+                            <textarea name="feedback" id="feedback" cols="10" rows="2" placeholder="Your Comment..."></textarea>
+                            <button><img src="../../assets/images/checkout/send.svg" alt=""></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>

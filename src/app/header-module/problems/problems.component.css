@@ -1,0 +1,150 @@
+.select-device {
+    padding: 20px;
+}
+
+.select-brand h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.select-brand p {
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ffc542;
+}
+
+.select-device h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    font-size: 10px;
+    color: #e64e5d;
+}
+
+.select-device p,
+.skipdevice p {
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ffc542;
+}
+
+.oinput input {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.skipdevice p {
+    display: flex;
+    justify-content: center;
+}
+
+.select-problem h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.select-problem p {
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ffc542;
+}
+
+.ng-select span {
+    /* padding: 5px; */
+    font-family: "Poppins-Medium";
+    background-color: #cdcdcd;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 100 !important;
+    margin-right: 5px;
+}
+
+.sub-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous button {
+    border: none;
+    background-color: transparent;
+    color: #d0d1d2;
+    padding: 10px;
+    font-family: "Poppins-SemiBold";
+    width: 110px;
+}
+
+.previou button {
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    padding: 10px;
+    font-family: "Poppins-SemiBold";
+    width: 110px;
+}
+
+.next button {
+    border: none;
+    background-color: #ffc542;
+    color: #000000;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    border-radius: 5px;
+    width: 110px;
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}
+
+.skipdevice {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 415px) {
+    .select-brand h2 {
+        font-size: 20px;
+    }
+    .select-brand p {
+        font-size: 12px;
+    }
+    .skipdevice p {
+        font-size: 12px;
+    }
+    .select-device h2 {
+        font-size: 20px;
+    }
+    .select-device p,
+    .skipdevice p {
+        font-size: 12px;
+    }
+}
+
+.search-icon img {
+    height: 16px;
+    width: auto;
+}

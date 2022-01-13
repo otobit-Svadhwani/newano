@@ -1,0 +1,168 @@
+.profile {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.user-profile-img img {
+    height: 180px;
+    width: auto;
+    border: 4px solid #000;
+    border-radius: 83%;
+}
+
+.profile-detail {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.profile-detail h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.profile-detail button {
+    border: none;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.user-profile-detail p {
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.user-profile {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-line {
+    width: 50%;
+    border-top: 1px solid #000;
+}
+
+.user-add {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.user-add h2 {
+    font-family: "Poppins-SemiBold";
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.user-loaction {
+    display: flex;
+    align-items: center;
+}
+
+.address-line {
+    border-top: 2px solid #828282;
+}
+
+.profile-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-add button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    color: #ffffff;
+    font-family: "Poppins-SemiBold";
+    align-items: center;
+}
+
+.profile-add button p {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.user-loaction p {
+    font-family: "Poppins-Regular";
+    color: #ffffff;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.service-review {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.service-review h2 {
+    font-family: "Poppins-SemiBold";
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.service-review button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    color: #ffffff;
+    font-family: "Poppins-SemiBold";
+}
+
+.user-profile-detail h6 {
+    font-family: "Poppins-SemiBold";
+    font-size: 12px;
+    color: #ffc542;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.gmail-chag-pass {
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+}
+
+@media only screen and (max-width: 415px) {
+    .profile-detail h2 {
+        margin: auto;
+    }
+    .gmail-chag-pass {
+        display: grid;
+    }
+    .gmail-chag-pass p {
+        margin-bottom: 10px;
+    }
+    .user-add h3 {
+        font-size: 20px;
+    }
+    .service-review h2 {
+        font-size: 20px;
+    }
+    .profile-add button p {
+        margin-left: 0px;
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+    .service-review button {
+        font-size: 10px;
+        width: 20%;
+    }
+}

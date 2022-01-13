@@ -1,0 +1,45 @@
+.select-add {
+    padding: 20px;
+    text-align: center;
+}
+
+.display-selected {
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.display-selected h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+}
+
+.display-selected p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+}
+
+.btn-save-cancle {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.save {
+    border: none;
+    background-color: #ffc542;
+    color: #000000;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    border-radius: 5px;
+    width: 110px;
+}
+
+.cancel {
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    border-radius: 5px;
+    width: 110px;
+}

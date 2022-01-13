@@ -1,0 +1,71 @@
+<section class="contact">
+    <div class="container">
+        <div class="contact-dote-right">
+            <img src="../../assets/images/shop/contact-dot.svg" alt="">
+        </div>
+        <div class="contact-box">
+            <div class="contact-box-contain">
+                <div class="text-center">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form [formGroup]="getInTouch">
+                            <div class="contact-form">
+                                <h3>Leave us a message</h3>
+                                <input type="text" name="name" id="name" formControlName="from_name" placeholder="Name" required>
+                                <div class="text-dangerr" *ngIf="nameflag">
+                                    Enter your Name
+                                </div>
+                                <input type="text" name="email" id="email" formControlName="to_email" placeholder="Email Address" required>
+                                <div class="text-dangerr" *ngIf="emailflag">
+                                    Enter your Email
+                                </div>
+                                <div class="text-dangerr" *ngIf="getInTouch.get('to_email').errors?.pattern">
+                                    Enter valid email.
+                                </div>
+                                <textarea name="message" id="message" cols="10" rows="2" formControlName="body" placeholder="Your Message" required></textarea>
+                                <div class="text-dangerr" *ngIf="msgflag">
+                                    Enter your Message
+                                </div>
+                                <div class="contact-btn">
+                                    <button (click)="submit()">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-dedtail">
+                            <div class="icon-detail">
+                                <img src="../../assets/images/shop/loc.svg" alt="">
+                                <p>4517 Washington Ave Manchester, Kentucky 39495</p>
+                            </div>
+                            <div class="icon-detail">
+                                <img src="../../assets/images/shop/call.svg" alt="">
+                                <p>+1(786)556-5820</p>
+                            </div>
+                            <div class="icon-detail">
+                                <img src="../../assets/images/shop/mess.svg" alt="">
+                                <p><a href="mailto: support@ano.solutions">support@ano.solutions</a></p>
+                            </div>
+                            <div class="social">
+                                <button><a href="https://www.instagram.com/anotechnologies/"  target="blank" ><img src="../../assets/images/footer/Instagram.svg" alt=""></a></button>
+                                <button><a href="https://www.facebook.com/anotechnologiesllc/"  target="blank" ><img src="../../assets/images/footer/Dribbble.svg" alt=""></a></button>
+                                <button><a href="https://twitter.com/anotechnologies"  target="blank" ><img src="../../assets/images/footer/Twitter.svg" alt=""></a></button>
+                                <button><a href="https://www.youtube.com/channel/UCfkZKNH2IHbQOgNPeNBmEpg/featured"  target="blank" ><img src="../../assets/images/footer/Youtube.svg" alt=""></a></button>
+                            </div>
+                            <div class="contact-map">
+                                <agm-map [latitude]="33.448376" [longitude]="-112.074036" [zoom]="11" [styles]="styles">
+                                    <agm-marker [latitude]="33.448376" [longitude]="-112.074036" [iconUrl]="Icon"></agm-marker>
+                                </agm-map>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-dote-left">
+            <img src="../../assets/images/shop/contact-dot.svg" alt="">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+.profile {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.user-profile-img img {
+    height: 180px;
+    width: auto;
+    border: 4px solid #000;
+    border-radius: 83%;
+}
+
+.profile-detail {
+    margin-top: 20px;
+}
+
+.profile-detail input {
+    font-family: "Poppins-SemiBold";
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+.profile-detail p {
+    font-family: "Poppins-SemiBold";
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.user-profile-detail p {
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.user-profile {
+    display: grid;
+    justify-content: center;
+}
+
+.profile-save {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+    margin-top: 100px !important;
+}
+
+.profile-save button {
+    border: none;
+    width: 150px;
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background-color: #ffc542;
+    color: #000000;
+}
+
+.cancel-btn {
+    background-color: #000000;
+    color: #ffffff;
+}
+.user-profile-img button {
+    border: none;
+    background-color: transparent;
+}
+.user-profile-img button img {
+    height: 30px;
+    width: auto;
+    border: none;
+    position: relative;
+    left: -110px;
+}
+
+@media only screen and (max-width: 415px) {
+    .cancel-btn {
+        margin-right: 10px;
+    }
+}

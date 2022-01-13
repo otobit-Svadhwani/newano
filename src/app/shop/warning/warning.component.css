@@ -1,0 +1,44 @@
+.send {
+    padding: 20px;
+}
+
+.send p {
+    font-family: "Poppins-SemiBold";
+    font-size: 25px;
+    text-align: center;
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}
+
+.sub-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous button {
+    border: none;
+    background-color: transparent;
+    color: #d0d1d2;
+    padding: 10px;
+    font-family: "Poppins-SemiBold";
+    width: 110px;
+}
+
+.next button {
+    border: none;
+    background-color: #ffc542;
+    color: #000000;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    border-radius: 5px;
+    width: 110px;
+}

@@ -1,0 +1,28 @@
+.empty-cart {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.empty-cart h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    margin: auto;
+}
+
+.empty-Cart img {
+    height: 170px;
+    width: auto;
+    margin: auto;
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}

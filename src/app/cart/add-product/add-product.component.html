@@ -1,0 +1,78 @@
+<div>
+    <form #Repair="ngForm">
+        <div class="all-adv-add">
+            <div class="select-brand">
+                <div class="close-side">
+                    <h2>Add Device</h2>
+                    <button><img (click)="close()" src="../../../assets/images/close.svg" alt=""></button>
+                </div>
+
+
+                <div>
+                    <ng-select name="brand" [(ngModel)]="bookRepair.device_id" (change)="getIssueList($event)" #device1="ngModel">
+
+                        <ng-option *ngFor="let brand of deviceList" (change)="getIssueList($event)" [value]="brand.device_id"><span>{{brand.device.categoryName}}</span> {{brand.device.modelName}}</ng-option>
+                    </ng-select>
+
+                    <div class="text-danger" *ngIf="device">
+                        select Device.
+                    </div>
+                </div>
+
+                <!-- <div class="optionselect">
+                    <select class="custom" name="brand" [(ngModel)]="bookRepair.device_id" (change)="getIssueList($event.target.value)" placeholder="Select Brand" #device1="ngModel" [ngClass]="{
+                'is-invalid':
+                device1.invalid &&
+                (formSubmitted || device1.touched) 
+                }">
+                        <option> Select Device</option>
+                        <option *ngFor="let device of deviceList" [value]="device.device.id">{{device.device.modelName}}</option>
+                    </select>
+                    <div class="text-danger" *ngIf="device">
+                        Select Device
+                    </div>
+                </div> -->
+            </div>
+
+
+            <div>
+                <ng-select name="device" [(ngModel)]="bookRepair.problem_id" (change)="getExpectedPrice()" #device1="ngModel">
+                    <ng-option *ngFor="let issue of issueList" [value]="issue.problem.id">{{issue.problem.problemName}}</ng-option>
+                </ng-select>
+                <!--     
+                <div class="oinput" *ngIf="othernameFlag">
+                    <input type="text" (keyup)=otherproblem($event.target.value) name="device" id="device" placeholder="Enter your other Problem">
+    
+                </div> -->
+                <div class="text-danger" *ngIf="problem">
+                    Select Problem.
+                </div>
+            </div>
+
+
+            <!-- <div class="select-device">
+                <div class="optionselect">
+                    <select class="custom" name="device" [(ngModel)]="bookRepair.problem_id" placeholder="Select Device" #device1="ngModel" (change)="getExpectedPrice()" [ngClass]="{
+                'is-invalid':
+                device1.invalid &&
+                (formSubmitted || device1.touched)  
+                }">
+
+                        <option  *ngFor="let issue of issueList" [value]="issue.problem.id">
+                            {{issue.problem.problemName}}
+                        </option>
+                    </select>
+                    <div class="text-danger" *ngIf="problem">
+                        Select Problem
+                    </div>
+                </div>
+            </div> -->
+            <div class="price-part">
+                <p>Expected Price: <span> $ {{bookRepair.TotalAmount}}</span></p>
+            </div>
+            <div class="add-device-btn">
+                <button type="submit" (click)="addDevice()">Add Device</button>
+            </div>
+        </div>
+    </form>
+</div>

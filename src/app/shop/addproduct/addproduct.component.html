@@ -1,0 +1,66 @@
+<div>
+    <h2>Add Device</h2>
+    <form #addCart="ngForm">
+        <div class="optionselect">
+            <select name="brand" [(ngModel)]="bookRepair.brand_id" (change)="getDeviceList($event)" #brand1="ngModel"
+                [ngClass]="{
+    'is-invalid':
+    brand1.invalid &&
+    (formSubmitted || brand1.touched) 
+    }" placeholder="Brand">
+                <option *ngFor="let brand of brandList" [value]="brand.id">{{brand.brandName}}</option>
+            </select>
+            <div class="text-danger" *ngIf="brand1.invalid &&
+    (formSubmitted || brand1.touched)">
+                Select Brand
+            </div>
+        </div>
+
+        <div class="optionselect">
+            <select name="device" [(ngModel)]="bookRepair.device_id" (change)="getIssueList($event)" #device1="ngModel"
+                [ngClass]="{
+        'is-invalid':
+        device1.invalid &&
+        (formSubmitted || device1.touched) 
+        }" placeholder="Device">
+                <option *ngFor="let device of deviceList" [value]="device.id">{{device.modelName}}
+                </option>
+            </select>
+            <div class="text-danger" *ngIf="device1.invalid &&
+        (formSubmitted || device1.touched)">
+                Select Device
+            </div>
+        </div>
+        <div class="optionselect">
+            <select name="problem" [(ngModel)]="bookRepair.problem_id" (change)="getExpectedPrice()" placeholder="issue"
+                #issue1="ngModel" [ngClass]="{
+        'is-invalid':
+        issue1.invalid &&
+        (formSubmitted || issue1.touched) 
+        }">
+                <option *ngFor="let issue of issueList" [value]="issue.problem.id">{{issue.problem.problemName}}
+                </option>
+            </select>
+            <div class="text-danger" *ngIf="issue1.invalid &&
+            (formSubmitted || issue1.touched)">
+                Select Issue
+            </div>
+        </div>
+
+        <span *ngIf="expectedPrice">Expected Price: ${{expectedPrice}}</span>
+
+        <div>
+            <button type="button" (click)="addToCart(addCart)">Add</button>
+        </div>
+
+        <!-- <div>
+            <ngx-dropzone (change)="onSelect($event)">
+                <ngx-dropzone-label>Drop it!</ngx-dropzone-label>
+                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                    <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-preview>
+            </ngx-dropzone>
+        </div> -->
+
+    </form>
+</div>

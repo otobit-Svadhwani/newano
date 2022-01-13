@@ -1,0 +1,79 @@
+<section class="track-map">
+    <div class="bg-map">
+        <agm-map *ngFor="let s of shop" [latitude]="s.latitude" [longitude]="s.longitude" [zoom]="14" [styles]="styles">
+            <agm-marker [latitude]="s.latitude" [longitude]="s.longitude" [iconUrl]="shopmark.icon"></agm-marker>
+        </agm-map>
+    </div>
+    <div class="shopdetail">
+        <div class="booking-detail">
+            <div class="booking-shop">
+                <div class="booking-shop-img">
+                    <img src="{{shopDetail.image}}" alt=" ">
+                    <h2>{{shopDetail.shopName}}</h2>
+                </div>
+                <div class="booking-sho-price ">
+                    <p>Total</p>
+                    <h2>${{order.TotalAmountToPay}}</h2>
+                </div>
+            </div>
+            <div class="booking-device ">
+                <div class="booking-device-box ">
+                    <p>Device #: <span>{{totaldevice}}</span></p>
+                    <!-- <p>Category: <span>Repair</span></p>
+                    <p>Services: <span>Repair</span></p> -->
+                    <div class="booking-date ">
+                        <p>Expected Date</p>
+                        <h2>{{order.repairedDate}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="destroy-system ">
+            <div class="destroy-system-box " *ngFor="let d of device">
+                <div class="destroy-system-img ">
+                    <img src="{{d.image}}" alt=" ">
+                </div>
+                <div class="destroy-system-det ">
+                    <h2>{{d.modelName}}</h2>
+                    <p>{{d.problem_name}}</p>
+                </div>
+            </div>
+            <!-- <div class="destroy-system-box ">
+                <div class="destroy-system-img ">
+                    <img src="../../assets/images/checkout/image 9.png " alt=" ">
+                </div>
+                <div class="destroy-system-det ">
+                    <h2>iphone 11 Pro</h2>
+                    <p>Screen Replacement</p>
+                </div>
+            </div>
+            <div class="destroy-system-box ">
+                <div class="destroy-system-img ">
+                    <img src="../../assets/images/checkout/image 9.png " alt=" ">
+                </div>
+                <div class="destroy-system-det ">
+                    <h2>iphone 11 Pro</h2>
+                    <p>Screen Replacement</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="track-view ">
+            <div class="track-view-box ">
+                <img class="loc-none" src="../../assets/images/tracking/Location-whthout-line.svg " alt=" ">
+                <h3>In Process</h3>
+            </div>
+            <div class="track-view-box " *ngIf="repairedFlag">
+                <img class="locc-line" src="../../assets/images/tracking/tracking-line.svg " alt=" ">
+                <h3>Repaired</h3>
+            </div>
+            <div class="track-view-box " *ngIf="deliveredFlag">
+                <img class="locc-line" src="../../assets/images/tracking/tracking-line.svg " alt=" ">
+                <h3>Delivered </h3>
+            </div>
+            <!-- <div class="track-view-address ">
+                <img class="locc-final" src="../../assets/images/tracking/Final-location.svg" alt=" ">
+                <h3>2715 Ash Dr. San Jose, South Dakota 83475</h3>
+            </div> -->
+        </div>
+    </div>
+</section>

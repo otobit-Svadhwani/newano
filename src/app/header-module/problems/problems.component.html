@@ -1,0 +1,33 @@
+<div>
+    <div class="select-device">
+        <div class="close-side">
+            <h2>Select Problem</h2>
+            <button><img (click)="close()" src="../../../assets/images/close.svg" alt=""></button>
+        </div>
+        <p>Issue</p>
+
+        <div>
+            <ng-select name="device" [(ngModel)]="bookRepair.problem" (change)="IssueList($event)" #device1="ngModel">
+                <ng-option *ngFor="let device of issueList" [value]="device.id">{{device.problemName}}</ng-option>
+            </ng-select>
+
+            <div class="oinput" *ngIf="othernameFlag">
+                <input type="text" (keyup)=otherproblem($event.target.value) name="device" id="device" placeholder="Enter your other Problem">
+
+            </div>
+            <div class="text-dangerr" *ngIf="problemFlag">
+                Select Problem.
+            </div>
+        </div>
+
+        <div class="sub-btn">
+            <div class="previou">
+                <button (click)="goToBrand()">
+                    < Previous</button>
+            </div>
+            <div class="next">
+                <button (click)="addRepair()">Done</button>
+            </div>
+        </div>
+    </div>
+</div>

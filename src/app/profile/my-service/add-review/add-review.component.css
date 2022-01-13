@@ -1,0 +1,95 @@
+.change-pass {
+    padding: 30px;
+}
+
+.change-pass h2 {
+    font-size: 30px;
+    font-family: "Poppins-SemiBold";
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    margin-top: 3px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    font-size: 10px;
+    color: #e64e5d;
+    width: 500%;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-form textarea {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.submit-btn button {
+    border: none;
+    background-color: #ffc542;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cont {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.bigstar {
+    display: flex;
+    justify-content: center;
+}
+
+.extra-service-rating {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.extra-service-rating .service-name h2 {
+    font-family: "Poppins-SemiBold";
+    border: 2px solid #000;
+    font-size: 20px !important;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.extra-service-rating .service-stars .cont {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    border: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+}

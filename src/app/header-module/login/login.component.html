@@ -1,0 +1,41 @@
+<div class="login-module">
+    <div class="login-intro">
+        <div class="close-side">
+            <h2>Login</h2>
+            <button><img (click)="close()"src="../../../assets/images/close.svg" alt=""></button>
+        </div>
+        <p>Welcome back to <span>ANO</span></p>
+    </div>
+    <form [formGroup]="loginInfo" class="login-form">
+        <div class="form-group">
+            <input type="email" id="email" class="form-control" fieldsize="small" formControlName="email" name="email" [ngClass]="{'is-invalid':(loginInfo.get('email').invalid)&&(formSubmitted )}" placeholder="Enter Email" required>
+            <div class="invalid-feedback" *ngIf="loginInfo.get('email').errors?.required ">
+                <span>Email id is required. </span>
+            </div>
+            <div class="invalid-feedback" *ngIf="loginInfo.get('email').errors?.pattern ">
+                <span>Enter valid email id. </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" class="form-control" fieldsize="small" formControlName="password" name="password" [ngClass]="{'is-invalid':(loginInfo.get('password').invalid)&&(formSubmitted )}" placeholder="Enter Password" required>
+            <div class="invalid-feedback" *ngIf="loginInfo.get('password').errors?.required ">
+                <span>Password is required. </span>
+            </div>
+        </div>
+
+        <div class="text-dangerr" *ngIf="invalidUserLog">
+            Invalid Email or password
+        </div>
+
+        <div class="login-det">
+            <h2>Don't Have An Account? <span (click)="signUp()">Get started</span></h2>
+        </div>
+
+        <div class="forgot-pass">
+            <h3 (click)="forgot()">Forgot password?</h3>
+        </div>
+
+
+        <button class="next" type="submit" (click)="logIn()" [disabled]="disableButton">Login</button>
+    </form>
+</div>

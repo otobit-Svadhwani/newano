@@ -1,0 +1,34 @@
+<section class="profile">
+    <div class="container">
+
+        <form [formGroup]="editprofile">
+
+            <div class="user-profile">
+                <div class="user-profile-img">
+                    <img src="../../../assets/images/shop/photo-1570295999919-56ceb5ecca61.jfif" alt="">
+                    <button><img src="../../../assets/images/profile/edit-profile.svg" alt=""></button>
+                </div>
+                <div class="user-profile-detail" *ngFor="let d of Details">
+                    <div class="profile-detail">
+                        <input type="text" formControlName="fname" name="user-name" id="f-name"
+                            placeholder="Enter new First Name">
+
+                    </div>
+
+                    <div class="profile-detail">
+                        <input type="text" formControlName="lname" name="user-name" id="l-name"
+                            placeholder="Enter new Last Name">
+                    </div>
+                    <div class="profile-detail">
+                        <p>+1{{d.mobileNumber}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-save">
+                <button class="cancel-btn" (click)="Cancel()">Cancel</button>
+                <button class="save-btn" (click)="save()">Save</button>
+            </div>
+        </form>
+
+    </div>
+</section>

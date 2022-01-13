@@ -1,0 +1,229 @@
+<section class="checkout">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="booking-detail">
+                    <div class="booking-shop">
+                        <div class="booking-shop-img">
+                            <img src={{shopDetails.image}} alt="">
+                            <h2>{{shopDetails.shopName}}</h2>
+                        </div>
+                        <div class="booking-sho-price">
+                            <p>Total To Pay</p>
+                            <div class="booking-sho-prices">
+                                <h2>$ {{orderDetails.TotalAmountToPay}}</h2>
+                                <h3 *ngIf="!cutprice">$ {{orderDetails.TotalPrice}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-device">
+                        <div class="booking-device-box">
+                            <div class="booking-date">
+                                <p>Expected Repair Date</p>
+                                <h2>{{orderDetails.repairedDate}}</h2>
+                            </div>
+                            <!-- <div class="booking-date">
+                                <p>Expected Drop up Time</p>
+                                <h2>{{orderDetails.expectedDelivery}}</h2>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="destroy-system" id="style-4">
+                    <div class="destroy-system-box" *ngFor="let details of detail">
+                        <div class="destroy-system-img">
+                            <img src="{{details.image}}" alt="">
+                        </div>
+                        <div class="destroy-system-det">
+                            <h2>${{details.price}}</h2>
+                            <p>{{details.problem_name}}</p>
+                            <div class="destroy-system-btn">
+                                <!-- <button [routerLink]="['/cart']"><img src="../../assets/images/edit.svg"
+                                        alt=""></button> -->
+
+
+                            </div>
+                            <p>{{details.modelName}}</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="alt-number">
+                    <p>Alternate Mobile Number</p>
+                    <div class="alt-number-inp">
+                        <input type="number" name="alt-no" id="alt-no" placeholder="(987)876-9877" value="" disabled>
+                        <button><img src="../../assets/images/checkout/FloppyDisk.svg" alt=""></button>
+                    </div>
+                </div> -->
+                <div class="deliver-system">
+
+                    <div *ngIf="!isMail">
+                        <div class="pick-up">
+                            <h2>Pick up Address</h2>
+                            <p>{{orderDetails.date}} </p>
+                            <p>{{orderDetails.startTime}}</p>
+                        </div>
+                        <div class="deliver-cab radio">
+                            <input class="deliver-radio" type="radio" id="deliver-cab" name="deliver-system" value="deliver-cab">
+                            <label for="deliver-cab" class="">
+                            <div>
+                                <img src="../../assets/images/checkout/pickup1.svg" alt="">
+                            </div>
+                            <div style="width: 100%;">
+                                <input type="text" name="receive-address" id="receive-address"
+                                    placeholder="receive-address" disabled value={{orderDetails.pickupLocation}}>
+                                <hr>
+                                <input type="text" name="shop-address" id="shop-address" placeholder="shop-address"
+                                    disabled value="{{shopDetails.addressLine1}}, {{shopDetails.addressLine2}}, {{shopDetails.city}}, {{shopDetails.state}} - {{shopDetails.zipCode}}">
+                            </div>
+                        </label><br>
+
+                        </div>
+                    </div>
+                    <div *ngIf="isMail">
+                        <div class="pick-up">
+                            <h2>Mail-In Address</h2>
+                            <p>{{orderDetails.date}} </p>
+                            <p>{{orderDetails.startTime}}</p>
+                        </div>
+                        <div class="deliver-cab radio">
+                            <input class="deliver-radio" type="radio" id="deliver-cab" name="deliver-system" value="deliver-cab">
+                            <label for="deliver-cab" class="">
+
+                            <div>
+                                <img src="../../assets/images/Location-white.svg" alt="">
+                            </div>
+                            <div style="width: 100%;">
+                                <input type="text" name="shop-address" id="shop-address" placeholder="shop-address"
+                                    disabled value="{{shopDetails.addressLine1}}, {{shopDetails.addressLine2}}, {{shopDetails.city}}, {{shopDetails.state}} - {{shopDetails.zipCode}}">
+                            </div>
+                        </label><br>
+
+                        </div>
+                    </div>
+                    <div *ngIf="!isCollectFromStore">
+                        <div class="pick-up">
+                            <h2>Drop up Address</h2>
+                            <p>{{orderDetails.repairedDate}} </p>
+                            <p>{{orderDetails.expectedDelivery}}</p>
+                        </div>
+                        <div class="deliver-mail deliver-cab radio">
+                            <input class="deliver-radio" type="radio" id="deliver-mail" name="deliver-system" value="deliver-mail">
+                            <label for="deliver-mail" class=" radio-labell">
+                                <div>
+                                    <img src="../../assets/images/Location-white.svg" alt="">
+                                </div>
+                                <div style="width: 100%;">
+                                    <input type="text" name="drop-off-address" id="drop-off-address"
+                                        placeholder="drop-off-address" disabled value={{orderDetails.dropLocation}}>
+                                </div>
+                            </label><br>
+                        </div>
+                    </div>
+
+                    <div *ngIf="isCollectFromStore">
+                        <div class="pick-up">
+                            <h2>Collect Device Address</h2>
+                            <p>{{orderDetails.repairedDate}} </p>
+                            <p>{{orderDetails.expectedDelivery}}</p>
+                        </div>
+                        <div class="deliver-mail deliver-cab radio">
+                            <input class="deliver-radio" type="radio" id="deliver-mail" name="deliver-system" value="deliver-mail">
+                            <label for="deliver-mail" class=" radio-labell">
+
+                            <div>
+                                <img src="../../assets/images/Location-white.svg" alt="">
+                            </div>
+                            <div style="width: 100%;">
+                                <input type="text" name="drop-off-address" id="drop-off-address"
+                                    placeholder="drop-off-address" disabled value= "{{shopDetails.addressLine1}}, {{shopDetails.addressLine2}}, {{shopDetails.city}}, {{shopDetails.state}} - {{shopDetails.zipCode}}">
+                            </div>
+                        </label><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="payment-side" *ngIf="!isPaid">
+                    <!-- <div class="promo-code">
+                        <input type="text" name="promo" id="promo" placeholder="Promo Code">
+                        <button class="promo-btn">Apply</button>
+                    </div> -->
+
+                    <div class="card-payment">
+                        <form [formGroup]="CardInfo">
+                            <div class="card-number">
+
+                                <p>Add Card Details</p>
+                                <div class="card-name card-num-ng">
+
+                                    <ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions">
+                                    </ngx-stripe-card>
+
+                                </div>
+                                <!-- <div class="card-noo">
+                                    <input type="text" name="card-no" class="form-control" [ngClass]="card_number" id="card-no" (keyup)="cardnum($event.target.value)" formControlName="card_number" maxlength="19" type="tel" placeholder="1234 4567 8901 2345" value="{{CARD}}" required>
+                                    <img src="../../assets/images/checkout/Cards.svg" alt="">
+                                </div>
+                                <div class="card-exp-cvc">
+                                    <input class="border-left" type="text" class="form-control" name="card-exp" (keyup)="expiry($event.target.value)" formControlName="exp_month" id="card-exp" maxlength="5" type="tel" placeholder="MM/YY" value="{{Expiry}}" required>
+                                    <input class="border-righ" type="text" class="form-control" name="cvv" id="cvc" formControlName="cvc" maxlength="3" placeholder="CVC">
+                                </div> -->
+                            </div>
+                            <div class="card-name">
+                                <p>Name on card</p>
+                                <input type="text" name="card-name" id="card-name" class="form-control" formControlName="cardholdername" placeholder="Card Holder Name" required>
+                                <div class="text-dangerr" *ngIf="nameflag">
+                                    Enter your card holder name
+                                </div>
+                            </div>
+                            <div class="payment-country">
+                                <p>Billing Zipcode</p>
+                                <input type="text" name="country-zip" id="country-zip" class="form-control" maxlength="6" formControlName="zip" placeholder="ZIP" required>
+                                <div class="text-dangerr" *ngIf="zipcodeflag">
+                                    Enter your zipcode
+                                </div>
+                            </div>
+                            <div class="policy">
+                                <div class="squaredOne">
+                                    <input #squaredOne type="checkbox" value="hello" id="squaredOne" name="check" (change)="setisTermsAndCondition(squaredOne.checked)" />
+                                    <label for="squaredOne">
+                                        <p>I accept all <a href="term" target="_blank"> terms and condition.</a></p>
+                                    </label>
+                                    <div class="text-dangerr" *ngIf="isTermsAndConditionValidate">
+                                        Please Accept out T&C.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-btns">
+                                <div class="pay-card">
+                                    <button (click)="pay()" type="submit">Pay
+                                        ${{orderDetails.TotalAmountToPay}}</button>
+                                    <img class="img-fluid" *ngIf="isLoading" src="../../assets/images/loader.gif" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="payment-done" *ngIf="isPaid">
+                    <div class="payment-done-mess">
+                        <h2>Thank you for choosing us</h2>
+                        <p>Your Order Id Is <span>#{{orderId}}</span></p>
+                        <button (click)="home()">Back to home</button>
+                    </div>
+                    <div class="payment-done-feedback">
+                        <h2>Feed us back</h2>
+                        <p>Help us know you better, so that we can serve you better.</p>
+                        <p>Information provided herein will be used solely for research purposes and will not be sold to any third parties.</p>
+                        <div class="feedback-input">
+                            <textarea name="feedback" id="feedback" cols="10" rows="2" placeholder="Your Feedback..."></textarea>
+                            <button><img src="../../assets/images/checkout/send.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,145 @@
+<section class="ano-header">
+    <div class=" hea-ano desktop">
+        <div class="ano-logo">
+            <img (click)="onhome()" src="../../assets/logo.svg" alt="ANO Solutions">
+            <!-- <div class="address-display">
+                <img src="../../assets/images/location-header.svg" alt="">
+                <p>{{area2}}...</p>
+            </div> -->
+        </div>
+        <div class="header-short">
+            <nav>
+                <div>
+                    <ul>
+                        <li (click)="onhome()" class="nav-item">Home</li>
+                        <li (click)="nearby()" class="nav-item">Near By Stores</li>
+                        <!-- <li (click)="onContact()" class="nav-item">Contact Us</li> -->
+                        <li (click)="onabout()" class="nav-item">About Us</li>
+                        <li *ngIf="!userName" class="nav-item"><button class="login-btn" (click)="logIn()">Log
+                                In</button></li>
+                        <div class="users">
+                            <li *ngIf="userName"><button (click)="openDropdown()" class="welcom-btn">{{userName}} <img
+                                    src="../../assets/images/profile/caret_down.svg" alt=""></button></li>
+
+                            <div *ngIf="isopenDropdown">
+                                <div class="user-drop">
+                                    <div class="user-detail">
+                                        <div class="user-name">
+                                            <div class="user-mm">
+                                                <h2>{{userName}}</h2>
+                                                <p>+1{{Phonenumber}}</p>
+                                            </div>
+                                            <div>
+                                                <img src="../../assets/images/profile/user-img.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/cart.svg" alt="">
+                                            <h3 (click)="cart()">My Cart</h3>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/account.svg" alt="">
+                                            <h3 (click)="account()">My Account</h3>
+                                        </div>
+                                        <!-- <div class="profile-list">
+                                            <img src="../../assets/images/profile/review.svg" alt="">
+                                            <h3 (click)="cart()">My Review</h3>
+                                        </div> -->
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/services.svg" alt="">
+                                            <h3 (click)="service()">My Services</h3>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/log_out.svg" alt="">
+                                            <h3 (click)="logout()">Logout</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="nav-item" *ngIf="!userName"><button class="signup-btn" (click)="signUp()">Sign
+                                Up</button></li>
+                        <li class="nav-item"><button class="repair-btn" (click)="bookRepair()">Book Repair</button></li>
+                        <li *ngIf="userName">
+                            <div class="profile-lists">
+                                <img (click)="cart()" src="../../assets/images/profile/cart.svg" alt="">
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="hea-ano-mobile">
+            <img class="hab-bug img-fluid" #toggleButton (click)="toggleMenu()" src="../../assets/images/hamb.svg" alt="">
+            <div class="ano-logo">
+                <img (click)="onhome()" src="../../assets/logo.svg" alt="">
+            </div>
+        </div>
+        <div class="header-mobile" *ngIf="isMenuOpen" #menu>
+            <nav class="hed-cont-pad">
+                <div>
+                    <div class="ano-logo">
+                        <img (click)="onhome()" src="../../assets/images/logo.svg" alt="">
+                    </div>
+                    <ul>
+                        <li (click)="onhome()" class="nav-item">Home</li>
+                        <li (click)="nearby()" class="nav-item">Near By Stores</li>
+                        <li (click)="onContact()" class="nav-item">Contact Us</li>
+                        <li (click)="onabout()" class="nav-item">About Us</li>
+                        <li *ngIf="!userName" class="nav-item"><button class="login-btn" (click)="logIn()">Log
+                                In</button></li>
+                        <div>
+                            <li *ngIf="userName"><button #userProfile (click)="openDropdown()" class="welcom-btn">{{userName}} <img
+                                        src="../../assets/images/profile/caret_down.svg" alt=""></button></li>
+                            <div *ngIf="isopenDropdown">
+                                <div class="user-drop">
+                                    <div class="user-detail">
+                                        <div class="user-name">
+                                            <div class="user-mm">
+                                                <h2>{{userName}}</h2>
+                                                <p>+1{{Phonenumber}}</p>
+                                            </div>
+                                            <div>
+                                                <img src="../../assets/images/profile/user-img.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/cart.svg" alt="">
+                                            <h3 (click)="cart()">My Cart</h3>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/account.svg" alt="">
+                                            <h3 (click)="account()">My Account</h3>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/services.svg" alt="">
+                                            <h3 (click)="service()">My Services</h3>
+                                        </div>
+                                        <div class="profile-list">
+                                            <img src="../../assets/images/profile/log_out.svg" alt="">
+                                            <h3 (click)="logout()">Logout</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="nav-item" *ngIf="!userName"><button class="signup-btn" (click)="signUp()">Sign
+                                Up</button></li>
+                        <li class="nav-item"><button class="repair-btn" (click)="bookRepair()">Book Repair</button></li>
+
+                        <li *ngIf="userName">
+                            <div class="profile-lists">
+                                <img (click)="cart()" src="../../assets/images/profile/cart.svg" alt="">
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>

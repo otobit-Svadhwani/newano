@@ -1,0 +1,99 @@
+.login-module {
+    padding: 20px;
+}
+
+.login-module h2 {
+    font-size: 30px;
+    font-family: "Poppins-SemiBold";
+}
+
+.login-module p {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+}
+
+.login-module p span {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+    color: #ffc542;
+    margin-left: 5px;
+}
+
+.login-form {
+    display: grid;
+    width: 100%;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+}
+
+.login-det h2 {
+    font-size: 12px;
+}
+
+.login-det span {
+    font-size: 12px;
+    color: #ffc542;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.login-module .next {
+    border: none;
+    background-color: #ffc542;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.login-module span {
+    font-family: "Poppins-Regular";
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    font-size: 12px;
+    color: #e64e5d;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    font-size: 12px;
+    color: #e64e5d;
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}
+
+.forgot-pass {
+    padding-top: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+.forgot-pass h3 {
+    font-family: "Poppins-SemiBold";
+    font-size: 12px;
+    cursor: pointer;
+}

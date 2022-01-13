@@ -1,0 +1,159 @@
+.all-services {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.title-filter {
+    display: flex;
+    justify-content: space-between;
+}
+.title-filter h2 {
+    font-size: 25px;
+    font-family: "Poppins-SemiBold";
+}
+.filter-opt {
+    display: flex;
+    align-items: baseline;
+}
+.filter-opt p {
+    font-family: "Poppins-Regular";
+    color: #b3b8bc;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.filter-opt select {
+    font-family: "Poppins-Regular";
+    margin-right: 10px;
+}
+.title-filter-hr {
+    color: #d8d8d8;
+    border-top: 2px solid;
+}
+.all-service-display {
+    margin-top: 20px;
+}
+.order-id-date {
+    display: flex;
+    justify-content: space-between;
+}
+.order-id-date h2 {
+    font-size: 10px;
+    font-family: "Poppins-SemiBold";
+}
+.shop-service {
+    display: flex;
+}
+
+.shop-deti img {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+}
+.shop-deti h3 {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+    margin-top: 10px;
+}
+.shop-deti p {
+    font-size: 10px;
+    font-family: "Poppins-Regular";
+}
+.shop-deti h2 {
+    font-size: 25px;
+    font-family: "Poppins-SemiBold";
+    margin-top: -10px;
+}
+.shop-deti {
+    border-right: 2px solid #6e6d70;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.shop-ser-box {
+    display: flex;
+}
+.shop-ser-box-img img {
+    height: 120px;
+    width: auto;
+    border-radius: 10px;
+}
+.shop-ser-box-det h2 {
+    font-size: 15px;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 0px;
+}
+.shop-ser-box-det p {
+    font-size: 15px;
+    font-family: "Poppins-SemiBold";
+    color: #6e6d70;
+    margin-bottom: 0px;
+}
+.shop-ser-box-det h3 {
+    font-size: 10px;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 0px;
+}
+.shop-ser-box-det {
+    margin-left: 15px;
+    max-width: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.review-part {
+    margin-top: 10px;
+}
+.review-part p {
+    font-family: "Poppins-Medium";
+    color: #217d00;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.review-part h6 {
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    width: 130px;
+}
+.review-star-view {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: center;
+}
+.review-star-view img {
+    height: 25px;
+    width: auto;
+}
+.review-star-view button {
+    border: none;
+    background-color: transparent;
+    color: #ffc542;
+    font-family: "Poppins-SemiBold";
+}
+.end-hr {
+    border-top: 2px solid #223138;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.subm-whwn-no-star button {
+    border: none;
+    background-color: #ffc542;
+    color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 30px;
+    width: 110px;
+}
+.subm-whwn-no-star {
+    display: flex;
+    align-items: center;
+}
+.if-service-empty {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.if-service-empty p{
+    font-family: "Poppins-SemiBold";
+    margin-top: 30px;
+    font-size: 25px;
+}

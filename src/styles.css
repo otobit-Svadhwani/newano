@@ -1,0 +1,237 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~@ng-select/ng-select/themes/material.theme.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("./assets/fonts/Poppins-Regular.eot");
+    src: url("./assets/fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+        url("./assets/fonts/Poppins-Regular.woff2") format("woff2"),
+        url("./assets/fonts/Poppins-Regular.woff") format("woff"),
+        url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("./assets/fonts/Poppins-Medium.eot");
+    src: url("./assets/fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+        url("./assets/fonts/Poppins-Medium.woff2") format("woff2"),
+        url("./assets/fonts/Poppins-Medium.woff") format("woff"),
+        url("./assets/fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("./assets/fonts/Poppins-SemiBold.eot");
+    src: url("./assets/fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("./assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
+        url("./assets/fonts/Poppins-SemiBold.woff") format("woff"),
+        url("./assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+.login-btn {
+    background-color: #ffe7b1;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    padding: 5px;
+    width: 90%;
+}
+
+.repair-btn,
+.signup-btn {
+    background-color: #ffc542;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 5px;
+    width: 90%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.modal-dialog {
+    margin-top: 100px !important;
+    z-index: 99999999999;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px !important;
+    }
+}
+
+input.star ~ label.star:before {
+    font-size: 20px !important;
+    padding: -5px;
+}
+
+label.star {
+    color: #444;
+    float: right;
+    font-size: 0px !important;
+    margin-right: 7px;
+    padding: 0px !important;
+}
+label.star:hover {
+    transform: rotate(0deg) scale(1.3) !important;
+}
+
+input:focus {
+    outline: 0 !important;
+}
+
+select:focus {
+    outline: 0 !important;
+}
+
+.ng-select .ng-select-container .ng-value-container {
+    padding: 0em 0 !important;
+    padding-left: 10px !important;
+    border-top: 0em solid transparent !important;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-clear-wrapper {
+    bottom: 2px;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-arrow-wrapper {
+    bottom: 4px;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+    height: 36px;
+    font-family: "Poppins-SemiBold";
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.select-brand .ng-select.ng-select-single .ng-select-container {
+    padding-left: 25px;
+}
+
+.ng-select,
+.ng-select div,
+.ng-select input,
+.ng-select span {
+    font-family: "Poppins-SemiBold";
+}
+
+/* `````````````````````````````````
+
+  Reaponsive
+
+
+  ````````````````````````````````` */
+
+@media only screen and (max-width: 991px) {
+    .desktop {
+        display: none !important;
+    }
+    .mobile {
+        display: block !important;
+    }
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+dp-date-picker.dp-material .dp-picker-input {
+    padding: 10px !important;
+    border: 1px solid #000000 !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 10px !important;
+    font-family: "Poppins-Regular" !important;
+    font-size: initial !important;
+    height: auto !important;
+    outline: none !important;
+    width: 100% !important;
+}
+
+dp-date-picker.dp-material {
+    width: 100%;
+}
+
+@media only screen and (max-width: 567px) {
+    .carousel-arrows-outside .carousel-arrow-next {
+        right: -50px !important;
+    }
+    .carousel-arrows-outside .carousel-arrow-prev {
+        left: -41px !important;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .carousel-arrows-outside .carousel-arrow-next {
+        right: -30px !important;
+    }
+    .carousel-arrows-outside .carousel-arrow-prev {
+        left: -33px !important;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .top-shop .carousel-arrows-outside .carousel-arrow-next {
+        right: 0px !important;
+    }
+    .top-shop .carousel-arrows-outside .carousel-arrow-prev {
+        left: -6px !important;
+    }
+}
+
+/* .carousel-cell{
+    width: 1980px;
+} */
+
+.without-dis .shop-box-carousel {
+    transform: translateX(0px);
+    width: 320px !important;
+}
+
+.without-dis .carousel-cells {
+    display: -webkit-box !important;
+    width: 1980px !important;
+}
+
+.without-dis .carousel-cells .carousel-cell {
+    position: inherit !important;
+}
+
+input.star-5:checked ~ label.star:before {
+    color: #fe7;
+    text-shadow: none !important;
+}
+.select-brand .ng-select .ng-select-container .ng-value-container .ng-input > input {
+    margin-left: 24px !important;
+    margin-top: 7px !important;
+}
+.bigstar input.star ~ label.star:before {
+    font-size: 40px !important;
+}
+.average-start input.star ~ label.star:before {
+    font-size: 40px !important;
+}

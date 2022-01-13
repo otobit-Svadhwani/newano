@@ -1,0 +1,30 @@
+.terms-and-condition{
+    margin-top: 60px !important;
+    font-family: 'Poppins-Regular';
+}
+.terms-and-condition h1,h2,h3,h4,h5,h6,h7{
+    font-family: 'Poppins-SemiBold' !important;
+}
+
+@media only screen and (max-width: 415px){
+    .terms-and-condition a{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        width: 100%;
+        display: block;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h4{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="select-any-one-shop">
+    <h2>You already have items from {{shopName1}} store added in your cart. Which store do you want to proceed with?</h2>
+    <div class="select-shop radio">
+        <input class="deliver-radio" type="radio" (click)="oldcart($event.target.value)" id="shop1" name="deliver-system" value="oldcart">
+        <label for="shop1" class="radio-label">
+      <p>{{shopName1}}</p>
+    </label>
+        <input class="deliver-radio" type="radio" (click)="newcart($event.target.value)" id="shop2" name="deliver-system" value="newcart">
+        <label for="shop2" class="radio-label">
+      <p>{{shopName2}}</p>
+    </label>
+    </div>
+    <div class="text-dangerr" *ngIf="emptyselect">
+        Choose Any One
+    </div>
+    <div class="submit">
+        <button (click)="submit()">Proceed</button>
+    </div>
+</div>

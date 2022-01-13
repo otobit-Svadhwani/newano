@@ -1,0 +1,194 @@
+<section class="map-booking without-dis">
+    <div class="bg-map">
+        <agm-map [latitude]="Lat" [longitude]="Lng" [zoom]="10" [styles]="styles">
+            <agm-marker [latitude]="Lat" [longitude]="Lng" [iconUrl]="Location.Icon"></agm-marker>
+            <agm-marker *ngFor="let m of Marker" [latitude]="m.latitude" [longitude]="m.longitude" [iconUrl]="m.icon">
+                <agm-info-window> <button (click)="shopDetail(m.id)">
+                  <p>{{m.shopName}}</p>   <br>{{m.Address1}} <br> {{m.Address2}}
+                </button></agm-info-window>
+
+            </agm-marker>
+            <!-- [label]="m.price" -->
+        </agm-map>
+    </div>
+    <div class="filter desktop">
+        <div class="shop-filter shop-in-box">
+            <div class="shop-filt-inp">
+                <input type="text" list="shops" name="mapshop" (change)="search($event.target.value)" id="shop" placeholder="Search Shop">
+                <datalist id="shops">
+                    <option *ngFor="let s of searchShoplist" value="{{s.shopName}}"><span> {{s.city}} {{s.state}}</span></option>
+                  </datalist>
+                <input type="hidden" name="answer" id="shop-hidden"> <button><img src="../../assets/images/Sliders.svg" alt=""></button>
+            </div>
+
+            <div *ngIf="noshop" style="text-align: center;">
+                <h4>No stores found within 20 miles of your location.</h4>
+            </div>
+
+            <!-- <div class="select-problem" *ngFor="let d of display">
+                <div class="select-device">
+                    <h3 (click)="filter()">{{d.Device}}</h3>
+                </div>
+                <div class="select-issue">
+                    <h3 (click)="filter()">{{d.problem}}</h3>
+                </div>
+            </div> -->
+            <!--Filer Pop up-->
+            <!-- <div *ngIf="filterFlag">
+                <form #Repair="ngForm">
+                    <div class="filter-popup">
+                        <h2>Filter</h2>
+                        <p>DEVICE</p>
+                        <div class="optionselect">
+                            <select class="custom" name="brand" [(ngModel)]="bookRepair.device" (change)="getIssueList($event)" placeholder="Select Brand" #device1="ngModel">
+                            <option *ngFor="let brand of deviceList" [value]="brand.id">{{brand.full_name}}</option>
+                        </select>
+                            <div class="text-danger" *ngIf="device1.invalid &&
+                (formSubmitted || device1.touched)">
+                                Select Device
+                            </div>
+                        </div>
+                        <p>PROBLEM</p>
+                        <div class="optionselect">
+                            <select class="custom" name="device" [(ngModel)]="bookRepair.problem" placeholder="Select Device" #device1="ngModel">
+                            <option *ngFor="let device of issueList" [value]="device.id">{{device.problem.problemName}}
+                            </option>
+                        </select>
+                        </div> -->
+
+
+            <!-- <p>PROBLEM</p>
+                    <div class="optionselect">
+                        <select class="custom" name="problem" [(ngModel)]="filterData.problem_id" placeholder="Select Problem">
+                            <option *ngFor="let issue of issueList" [value]="issue.id">{{issue.problem.problemName}}
+                            </option>
+                        </select>
+                    </div> -->
+
+
+            <!-- <div class="filter-popup-btn">
+                            <button (click)="applyFilter(Repair)">Apply Filter</button>
+                            <button>Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div> -->
+            <div class="shop-come">
+                <div class="shop-box" *ngFor="let store of newShop" (click)="shopDetail(store.id)">
+                    <div class="shop-ing">
+                        <img class="img-fluid" src="{{store.image}}" alt="">
+                    </div>
+                    <div class="shop-detail">
+                        <div class="detail-name">
+                            <h2>{{store.shopName}}</h2>
+                            <div class="cont">
+                                <ngx-star-rating class="rating" [(ngModel)]="store.average_rating" [id]="'rating3'" [disabled]="true"></ngx-star-rating>
+                            </div>
+
+
+                        </div>
+                        <div class="detail-name2">
+                            <div class="address dis-f">
+                                <img src="../../assets/images/location.svg" alt="">
+                                <p style="margin-bottom: 0px;">{{store.addressLine1}} {{store.addressLine2}} {{store.city}}, {{store.state}} - {{store.zipCode}}</p>
+
+                            </div>
+                            <div class="dis-f">
+                                <img src="../../assets/images/Icon awesome-car.svg" alt="">
+                                <p>{{store.distance | number : '1.2-2'}}</p>
+                            </div>
+                            <!-- <div class="dis-f">
+                                <img src="../../assets/images/Icon material-attach-money.svg" alt="">
+                                <p *ngFor="let price of store.pricing">{{price.price}}</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-location">
+            <input id="pac-input" (change)="handleAddressChange($event.target.value)" value="{{area}}" />
+            <!-- <input ngx-google-places-autocomplete [options]='options' (onAddressChange)="AddressChange($event)" type="text" name="" id="" placeholder="Search Location">{{ formattedaddress }} -->
+            <button (change)="handleAddressChange($event.target.value)"><img src="../../assets/images/search.svg"
+                    alt=""></button>
+        </div>
+    </div>
+    <div class="blur-div">
+    </div>
+    <!-- <div class="container">
+    </div> -->
+    <div class="top-shop">
+        <div class="container">
+            <div class="text-center title-shop">
+                <h2>All Stores</h2>
+                <p>Fixxi believes in serving its customers with the best experience ever. Get our App and enjoy a seamless experience. Our services are just easy to avail through your Smartphone. </p>
+            </div>
+            <!-- <carousel [height]="245" [cellWidth]="320" [arrowsOutside]="true"> -->
+            <div class="row">
+                <div class="col-md-4 col-sm-6" *ngFor="let store of AllStore">
+                    <div class="carousel-cell shop-box-carousel" (click)="shopDetail(store.id)">
+                        <div class="shop-img">
+                            <img class="img-fluid" src="{{store.image}}" alt="">
+                        </div>
+                        <div class="shop-detail">
+                            <div class="detail-name">
+                                <h2>{{store.shopName}}</h2>
+                                <div class="cont">
+                                    <ngx-star-rating class="rating" [(ngModel)]="store.average_rating" [id]="'rating3'" [disabled]="true"></ngx-star-rating>
+                                </div>
+                            </div>
+                            <div class="detail-name2">
+                                <p>{{store.city}}, {{store.state}} - {{store.zipCode}}</p>
+
+
+                                <!-- <div class="dis-f">
+                                        <img src="../../assets/images/Icon awesome-car.svg" alt="">
+                                        <p>{{store.distance | number : '1.2-2'}}</p>
+                                    </div> -->
+                                <!-- <div class="dis-f">
+                                        <img src="../../assets/images/Icon material-attach-money.svg" alt="">
+                                        <p *ngFor="let price of store.pricing">{{price.price}}</p>
+                                    </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </carousel> -->
+        </div>
+    </div>
+    <div class="expe">
+        <div class="text-center">
+            <h2>Get the app for better Experience</h2>
+        </div>
+        <div class="experience">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="experience-detail">
+                            <h3>Get Service from your mobile</h3>
+                            <p>Sign-up and get a free quote for your fix!!</p>
+                            <p>Just download the Fixxi app on your device. Schedule an appointment online at your desired location and time. If you are not nearby our branch, you can get your device repaired by dropping it at us! Get drop services just by
+                                logging in. So why to wait?</p>
+                            <h4>Get the App</h4>
+                            <div class="store">
+                                <button><img src="../../assets/images/Google Play Badge.svg" alt=""></button>
+                                <button><img src="../../assets/images/App Store Badge.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="experience-img1">
+                            <img class="img-fluid" src="../../assets/images/Screen1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="experience-img2">
+                            <img class="img-fluid" src="../../assets/images/Screen2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

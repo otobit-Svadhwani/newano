@@ -1,0 +1,391 @@
+.checkout {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.booking-detail {
+    display: flex;
+}
+
+.booking-shop {
+    height: 160px;
+    margin-right: 15px;
+}
+
+.booking-shop-img img {
+    height: 60px;
+    width: auto;
+}
+
+.minus p span {
+    margin-right: 10px !important;
+}
+
+.booking-shop-img h2 {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+    margin-top: 10px;
+}
+
+.booking-sho-price p {
+    font-size: 10px;
+    font-family: "Poppins-Regular";
+}
+
+.booking-sho-price h2 {
+    font-size: 30px;
+    font-family: "Poppins-SemiBold";
+}
+
+.booking-device {
+    height: 160px;
+}
+
+.booking-device-box {
+    background: #fff3d9;
+    padding: 20px;
+    height: 100%;
+    border-radius: 5px;
+    display: grid;
+    align-items: flex-end;
+}
+
+.booking-device-box p {
+    font-size: 10px;
+    margin-bottom: 5px;
+    font-family: "Poppins-Regular";
+}
+
+.booking-device-box p span {
+    margin-left: 5px;
+    font-family: "Poppins-SemiBold";
+}
+
+.booking-date h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 18px;
+}
+
+.Login_dividerWrapper__3pXsj p {
+    margin-bottom: 0 !important;
+}
+
+.destroy-system {
+    margin-top: 20px;
+    display: flex;
+}
+
+.destroy-system-box {
+    padding: 10px;
+}
+
+.destroy-system-img {
+    height: 240px;
+    width: auto;
+}
+
+.destroy-system-img img {
+    height: 320px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.destroy-system-det h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Poppins-SemiBold";
+}
+
+.destroy-system-det p {
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Poppins-SemiBold";
+}
+
+.destroy-system-btn button {
+    border: none;
+    width: 98%;
+    border-radius: 10px;
+    background: #000000;
+}
+
+.deliver-cab {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.deliver-cab label {
+    display: flex;
+    background-color: #cdcdcd;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.deliver-cab label hr {
+    margin: 9px;
+    border-top: 1px solid #ffffff;
+    width: 96%;
+}
+
+.deliver-cab h2 {
+    font-size: 18px;
+    font-family: "Poppins-SemiBold";
+    color: #ffffff;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.deliver-system {
+    margin-top: 30px;
+}
+
+.deliver-system p {
+    font-family: "Poppins-Medium";
+    font-size: 15px;
+    color: #217d00;
+    margin-bottom: 0px;
+}
+
+.reviews-title h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.revi-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.revi-img {
+    display: grid;
+    align-items: center;
+}
+
+.revi-img img {
+    height: 80px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.revi-detail {
+    margin-left: 15px;
+}
+
+.revi-detail h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.revi-detail p {
+    font-family: "Poppins-Regular";
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.star-like {
+    display: flex;
+    align-items: center;
+}
+
+.star-like img {
+    height: 20px;
+    width: auto;
+}
+
+.addcomment {
+    margin-top: 40px;
+}
+
+.addstar img {
+    height: 30px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+/* payment-done */
+
+.payment-done-mess h2 {
+    font-size: 60px;
+    font-family: "Poppins-SemiBold";
+    color: #ffc542;
+}
+
+.payment-done-mess p {
+    font-size: 20px;
+    font-family: "Poppins-Regular";
+}
+
+.payment-done-mess p span {
+    font-family: "Poppins-SemiBold";
+    background-color: #ffc542;
+}
+
+.payment-done-mess button {
+    border: none;
+    background-color: #ffc542;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Poppins-SemiBold";
+}
+
+.payment-done-feedback h2 {
+    font-size: 40px;
+    font-family: "Poppins-SemiBold";
+}
+
+.payment-done-feedback p {
+    font-size: 20px;
+    font-family: "Poppins-Regular";
+}
+
+.feedback-input {
+    display: flex;
+    width: 100%;
+}
+
+.feedback-input textarea {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    width: 100%;
+}
+
+.feedback-input button {
+    border: none;
+    background-color: #000000;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.addstar {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product-details {
+    width: 85%;
+}
+
+.product-details h2 {
+    font-family: "Poppins-Medium";
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.product-details hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 3px solid #c4c4c4;
+}
+
+.product-fee {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins-Regular";
+}
+
+.product-fee span {
+    position: absolute;
+    right: 30%;
+    font-size: 20px;
+    font-family: "Poppins-Regular";
+}
+
+.product-fee p {
+    font-size: 20px;
+    font-family: "Poppins-Regular";
+    margin-bottom: 10px;
+}
+
+.total-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-product h2 {
+    font-family: "Poppins-Medium";
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.total-product h3 {
+    font-family: "Poppins-SemiBold";
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.download-invoice button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.download-invoice p {
+    font-family: "Poppins-Regular";
+    color: #0043f0;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.shop-infoo img {
+    height: 180px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.shop-infoo hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 3px solid #c4c4c4;
+    width: 250px;
+    margin-left: 0px;
+}
+
+.shop-infoo h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+}
+
+.dis-f {
+    display: flex;
+}
+
+.dis-f img {
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.dis-f p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.need-help button {
+    border: none;
+    background-color: transparent;
+    color: #0043f0;
+}
+
+.reviews {
+    margin-top: 40px;
+}

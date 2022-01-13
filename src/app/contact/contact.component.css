@@ -1,0 +1,118 @@
+.contact {
+    margin-top: 130px;
+}
+
+.contact-box {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 11px #e9e9e9;
+}
+
+.contact-box-contain h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+    color: #ffc542;
+    border-bottom: 2px solid #4a99d3;
+    margin-bottom: 30px !important;
+    max-width: 200px;
+    margin: auto;
+}
+
+.contact-form {
+    display: grid;
+    padding: 20px;
+}
+
+.contact-form h3 {
+    font-family: "Poppins-Regular";
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.contact-form input {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+}
+
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    height: 250px;
+}
+
+.contact-btn button {
+    border: none;
+    background-color: #ffc542;
+    color: #ffffff;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.contact-dedtail {
+    display: grid;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.icon-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-detail img {
+    margin-right: 10px;
+}
+
+.icon-detail p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    max-width: 250px;
+    margin-bottom: 0px;
+}
+
+.social button {
+    border: none;
+    background-color: transparent;
+    margin-right: 15px;
+}
+
+.contact-map,
+agm-map {
+    margin-top: 20px;
+    height: 250px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.contact-dote-right {
+    position: absolute;
+    right: 8%;
+    top: 13%;
+}
+
+.contact-dote-left {
+    position: relative;
+    top: -40px;
+    left: -90px;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    font-size: 12px;
+    color: #e64e5d;
+}

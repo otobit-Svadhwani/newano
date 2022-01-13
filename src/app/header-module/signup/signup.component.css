@@ -1,0 +1,130 @@
+.signup-module {
+    padding: 20px;
+}
+
+.signup-module h2 {
+    font-size: 26px;
+    font-family: "Poppins-SemiBold";
+}
+
+.signup-form p span {
+    font-size: 13px;
+    font-family: "Poppins-SemiBold";
+}
+
+.signup-form p {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+    color: #ffc542;
+    margin-left: 3px;
+}
+
+.signup-inp {
+    display: grid;
+    width: 100%;
+}
+
+.signup-inp input {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+}
+
+.signup-inp textarea {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+}
+
+.signup-det button {
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+}
+
+.signup-det span {
+    font-size: 12px;
+    color: #ffc542;
+    margin-left: 5px;
+}
+
+.signup-det button {
+    padding: 10px;
+    border: none;
+    background-color: #ffc542;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.signup-module .next {
+    border: none;
+    background-color: #ffc542;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.signup-module .previous {
+    border: none;
+    background-color: #ffc542;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    font-size: 10px;
+    color: #e64e5d;
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}
+
+.change-number p {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+    color: #000000;
+}
+
+.change-number p span {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #ffc542;
+}
+
+.ng-select span {
+    /* padding: 5px; */
+    font-family: "Poppins-Medium";
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 100 !important;
+}

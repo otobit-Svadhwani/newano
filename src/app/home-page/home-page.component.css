@@ -1,0 +1,909 @@
+.ano-banner {
+    background-color: #ffffff;
+}
+
+.padding {
+    padding: 25px 0 25px 0;
+}
+
+h1 {
+    font-family: "Poppins-SemiBold";
+    padding-top: 25px;
+    margin-bottom: 30px;
+    color: #212529;
+}
+
+h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 40px;
+    color: #212529;
+    padding-top: 25px;
+    margin-bottom: 30px;
+}
+
+.banner-detail {
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.banner-detail p {
+    font-size: 15px;
+    font-family: "Poppins-regular";
+    max-width: 600px;
+    color: #ffffff;
+    padding-top: 25px;
+    margin-top: -25px;
+    margin-bottom: -3px;
+}
+
+.text-dangerr {
+    font-family: "Poppins-Regular";
+    font-size: 12px;
+    color: #e64e5d;
+    margin-left: 43px;
+}
+
+.repair-btn {
+    width: 20% !important;
+    font-family: "Poppins-SemiBold";
+    color: #000000;
+}
+
+.service-box {
+    padding: 10px;
+}
+
+.service-box img {
+    height: 150px !important;
+    width: auto !important;
+    border-radius: 5px !important;
+    box-shadow: 0 0 3px #e9e9e9;
+}
+
+.service-box h2 {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 60%;
+    color: #ffffff;
+}
+
+.extra-detail {
+    display: grid;
+}
+
+.extra-detail h3 {
+    margin-bottom: 0px;
+    text-align: center;
+    color: #2ec5ce;
+    font-family: "Poppins-SemiBold";
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.extra-detail p {
+    text-align: center;
+    font-family: "Poppins-regular";
+    font-size: 15px;
+}
+
+.howitwork,
+.whyus {
+    width: 100%;
+}
+
+.howitwork-title h3,
+.whyus-title h3,
+.about-title h3,
+.count-head h3 {
+    font-size: 40px;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 30px;
+}
+
+.about-title {
+    margin-top: 50px;
+}
+
+.servicelist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whyuslist {
+    display: flex;
+    align-items: center;
+}
+
+.listdisplay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.whyuslist-detailll {
+    height: 100px;
+}
+
+.service-detail,
+.whyus-detail {
+    display: grid;
+    text-align: center;
+}
+
+.service-detail h4 {
+    font-size: 24px;
+    font-family: "Poppins-Medium";
+}
+
+.whyus-detail h4 {
+    font-size: 18px;
+    font-family: "Poppins-SemiBold";
+}
+
+.service-detail p,
+.whyus-detail p {
+    font-size: 15px;
+    font-family: "Poppins-regular";
+}
+
+.whyus-detail {
+    text-align: center !important;
+    margin-right: 40px;
+}
+
+.service-detail img {
+    height: 100%;
+    width: auto;
+}
+
+.whyimg {
+    /* display: flex; */
+    height: 100px;
+    z-index: 9;
+}
+
+.aboutus {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.aboutdetail p {
+    font-family: "Poppins-regular";
+    font-size: 15px;
+}
+
+.aboutdetail button {
+    color: #ffc542;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.about-img img {
+    width: 70%;
+    display: flex;
+    float: right;
+}
+
+.signup-driver {
+    background-color: #fffff5 !important;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.driver-bg {
+    background-repeat: no-repeat !important;
+}
+
+.driver-title h3 {
+    font-size: 60px;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 30px;
+}
+
+.driver-title p,
+.client-title p,
+.service p,
+.service h4 {
+    font-size: 15px;
+    font-family: "Poppins-Regular";
+}
+
+.requestform {
+    padding-top: 85px;
+    width: 100%;
+}
+
+.requestform button {
+    background-color: #18191f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Poppins-SemiBold";
+    width: 120px;
+}
+
+.requestform input {
+    background-color: #fffff5;
+    border: none;
+    border-bottom: 1px solid #ccccc4;
+    font-family: "Poppins-Regular";
+}
+
+.name,
+.contact {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+}
+
+.req-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.client {
+    background-color: #f9f9fa;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.client-title {
+    text-align: center;
+}
+
+.review {
+    /* background-image: url(../../assets/images/Card.svg); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    display: grid;
+}
+
+.review-blog {
+    padding: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.review-blog h4 {
+    font-size: 20px;
+    font-family: "Poppins-SemiBold";
+}
+
+.review-blog p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+}
+
+.client-title h3,
+.service h3 {
+    font-size: 40px;
+    font-family: "Poppins-SemiBold";
+}
+
+
+/* .client-review {
+    display: flex;
+} */
+
+.store button {
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.reviewer {
+    display: grid;
+    justify-content: center;
+    text-align: -webkit-center;
+    margin-top: 10px;
+}
+
+.reviewer h5 {
+    font-size: 20px;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 0px;
+}
+
+.reviewer p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+}
+
+.count-head h5 {
+    font-size: 18px;
+    font-family: "Poppins-Regular";
+}
+
+.count {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.count-head h3 {
+    margin-bottom: 0px;
+}
+
+.counts {
+    display: flex;
+    width: 100%;
+}
+
+.hexagon {
+    background-image: url(../../assets/images/Polygon.svg);
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+}
+
+.hexagonetext {
+    position: relative;
+    top: 98px;
+    text-align: center;
+}
+
+.hexagonetext h3 {
+    font-size: 30px;
+    font-family: "Poppins-SemiBold";
+}
+
+.hexagonetext h4 {
+    font-size: 18px;
+    font-family: "Poppins-Regular";
+}
+
+.service {
+    background-color: #ffefcf;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.experience-img1 img {
+    position: relative;
+    top: -30px;
+}
+
+.experience-img2 img {
+    position: relative;
+    top: 30px;
+}
+
+.store img {
+    margin-right: 10px;
+}
+
+carousel.carousel {
+    z-index: 0;
+}
+
+.service-detail-img {
+    height: 150px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.service-detail-img-detail {
+    height: 150px;
+}
+
+.service-detail p {
+    margin: auto;
+}
+
+.about-img-12 {
+    display: flex;
+    margin-top: 130px;
+}
+
+.about-img-12 .about-img-1 {
+    height: 250px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.about-img-12 .about-img-2 {
+    height: 210px;
+    width: auto;
+    margin-top: 40px;
+}
+
+.about-img-34 .about-img-3 {
+    height: 180px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.about-img-34 {
+    margin-top: 20px;
+}
+
+.about-img-34 .about-img-4 {
+    height: 290px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.about-img-34 {
+    display: flex;
+}
+
+.home-banner {
+    width: 100%;
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 640px;
+}
+
+.home-banner .row {
+    margin-right: 0px;
+}
+
+.select-dervice-car {
+    width: 80%;
+    position: relative;
+    right: -15%;
+    cursor: pointer !important;
+}
+
+.service-detail {
+    height: 300px;
+    width: 300px;
+}
+
+.desktop.whyusline {
+    position: relative;
+    margin-top: -55px;
+}
+
+.desktop.whyusline img {
+    position: relative;
+    top: 70px;
+    width: 76%;
+    right: -95px;
+}
+
+
+/* ````````````````````````````````````````````````
+
+animatiom
+
+`````````````````````````````````````````````` */
+
+.banner-detail h2 {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+}
+
+.banner-detail p {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+}
+
+.banner-detail div {
+    float: left;
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+}
+
+.banner-detail h2 {
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.banner-detail p {
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.banner-detail div {
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes titleAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+}
+
+.anim_one {
+    animation: pulse 1s linear infinite alternate;
+}
+
+.anim_three {
+    -webkit-animation: updown 5s linear infinite;
+    animation: updown 5s linear infinite;
+}
+
+.anim_four {
+    -webkit-animation: leftright 5s linear infinite;
+    animation: leftright 5s linear infinite;
+}
+
+.anim_seven {
+    animation: fltleftright 3s linear infinite;
+}
+
+@-webkit-keyframes pulse {
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: translatez(0) rotate(0);
+    }
+    100% {
+        transform: translatez(0) rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translatez(0) rotate(0);
+    }
+    100% {
+        transform: translatez(0) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes updown {
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes updown {
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@-webkit-keyframes leftright {
+    0%,
+    100% {
+        transform: translateX(-50px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes leftright {
+    0%,
+    100% {
+        transform: translateX(-50px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+@-webkit-keyframes anim_five {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    20% {
+        transform: translate(73px, -1px) rotate(36deg);
+    }
+    40% {
+        transform: translate(141px, -20px) rotate(72deg);
+    }
+    60% {
+        transform: translate(83px, -60px) rotate(108deg);
+    }
+    80% {
+        transform: translate(-40px, 72px) rotate(144deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes anim_five {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    20% {
+        transform: translate(73px, -1px) rotate(36deg);
+    }
+    40% {
+        transform: translate(141px, -20px) rotate(72deg);
+    }
+    60% {
+        transform: translate(83px, -60px) rotate(108deg);
+    }
+    80% {
+        transform: translate(-40px, 72px) rotate(144deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@-webkit-keyframes fltmovetwo {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    21% {
+        transform: translate(4px, -20px) rotate(38deg);
+    }
+    41% {
+        transform: translate(-50px, -60px) rotate(74deg);
+    }
+    60% {
+        transform: translate(-20px, -30px) rotate(108deg);
+    }
+    80% {
+        transform: translate(-195px, -49px) rotate(144deg);
+    }
+    100% {
+        transform: translate(-1px, 0px) rotate(180deg);
+    }
+}
+
+@keyframes fltmovetwo {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    21% {
+        transform: translate(4px, -20px) rotate(38deg);
+    }
+    41% {
+        transform: translate(-50px, -60px) rotate(74deg);
+    }
+    60% {
+        transform: translate(-20px, -30px) rotate(108deg);
+    }
+    80% {
+        transform: translate(-195px, -49px) rotate(144deg);
+    }
+    100% {
+        transform: translate(-1px, 0px) rotate(180deg);
+    }
+}
+
+@-webkit-keyframes fltleftright {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(10px, -5px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes fltleftright {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(10px, -5px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+
+/* `````````````````````````````````
+
+  Responsive
+
+
+  ````````````````````````````````` */
+
+@media only screen and (max-width: 991px) {
+    .listdisplay {
+        display: grid;
+    }
+    .whyus-detail {
+        text-align: center !important;
+        margin-bottom: 55px;
+    }
+    .whyimg {
+        justify-content: center;
+    }
+    .hexagon {
+        width: 165% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-detail {
+        margin-left: 20px;
+        margin-top: -60px;
+    }
+    .about-img.col-md-6 {
+        display: grid;
+        justify-content: end;
+        margin-top: 40px;
+    }
+    .about-img-12 {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .select-dervice-car {
+        position: inherit !important;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .counts {
+        display: grid;
+        justify-content: center;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .banner-detail h2 {
+        font-size: 55px;
+    }
+    .about-img-12 .about-img-1 {
+        height: 160px;
+        position: relative;
+        bottom: -37px;
+    }
+    .about-img-12 .about-img-2 {
+        height: 160px;
+    }
+    .about-img-34 .about-img-3 {
+        height: 105px;
+        position: relative;
+        right: -33px;
+    }
+    .about-img-34 .about-img-4 {
+        height: 200px;
+    }
+    .name,
+    .contact {
+        display: grid;
+    }
+    .requestform input {
+        width: 101%;
+        height: 45px;
+        background-color: transparent;
+    }
+    .contact {
+        margin-top: -18px;
+    }
+    .hexagon {
+        background-size: contain;
+        height: 242px;
+        background-position: center;
+    }
+    .hexagonetext {
+        top: 77px;
+    }
+    .howitwork-title h3,
+    .whyus-title h3,
+    .about-title h3,
+    .count-head h3 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .driver-title h3 {
+        font-size: 30px;
+        max-width: 165px;
+    }
+    .client-title h3,
+    .service h3 {
+        font-size: 30px;
+        max-width: 260px;
+        margin-bottom: 10px;
+    }
+    .experience-img1 {
+        border-top: 2px solid #000;
+        margin-top: 20px;
+    }
+    .experience-img1 img {
+        top: 0px;
+    }
+    .store button {
+        margin-bottom: 10px;
+    }
+    .aboutus {
+        margin-top: -30px;
+    }
+    .banner-detail p {
+        padding-top: 35px;
+    }
+    .service-detail h4 {
+        font-size: 15px;
+        font-family: "Poppins-SemiBold";
+    }
+    .service-detail p {
+        font-size: 12px;
+    }
+    .service-detail,
+    .whyus-detail {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+    .service-detail-img {
+        height: 100px;
+    }
+    .howitwork {
+        margin-bottom: 80px;
+    }
+    .whyus-detail {
+        margin-bottom: 65px;
+    }
+    .requestform {
+        padding-top: 25px;
+    }
+    .whyuslist {
+        display: grid;
+        align-items: center;
+    }
+    .servicelist {
+        display: grid;
+    }
+}

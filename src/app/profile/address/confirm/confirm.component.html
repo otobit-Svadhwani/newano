@@ -1,0 +1,22 @@
+<div class="select-add" *ngIf="changedefault">
+    <div class="display-selected" *ngFor="let a of newaddress">
+        <h2>Set as new default address</h2>
+        <p>{{a.fname}} {{a.lname}}</p>
+        <p>{{a.addressLine}} {{a.city}} {{a.state}} {{a.zipCode}}</p>
+    </div>
+    <div class="btn-save-cancle">
+        <button class="cancel" type="submit" (click)="onDontSave()" [disabled]="disableButton">Cancel</button>
+        <button class="save" type="submit" (click)="onSave()" [disabled]="disableButton">Save</button>
+    </div>
+</div>
+<div class="select-add" *ngIf="!changedefault">
+    <div class="display-selected" *ngFor="let a of newaddress">
+        <h2>Do you want to Delete address</h2>
+        <p>{{a.fname}} {{a.lname}}</p>
+        <p>{{a.addressLine}} {{a.city}} {{a.state}} {{a.zipCode}}</p>
+    </div>
+    <div class="btn-save-cancle">
+        <button class="cancel" type="submit" (click)="onDontSave()" [disabled]="disableButton">Cancel</button>
+        <button class="save" type="submit" (click)="ondelete()" [disabled]="disableButton">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,156 @@
+<div class="signup-module">
+    <div class="close-side">
+        <h2>Sign Up</h2>
+        <button><img (click)="close()" src="../../../assets/images/close.svg" alt=""></button>
+    </div>
+    <form [formGroup]="signUpForm">
+        <!--Sign up Name-->
+        <div *ngIf="signUpNameFlag">
+            <div class="signup-form">
+                <p>User Details</p>
+                <div class="signup-inp">
+                    <input type="text" name="name" id="name" formControlName="fname" placeholder="First Name" [ngClass]="{'is-invalid':(signUpForm.get('fname').invalid)&&(formSubmitted ||nameSignUpFilled )}" required>
+                    <div class="text-dangerr" *ngIf="(signUpForm.get('fname').invalid)&&(formSubmitted ||nameSignUpFilled )">
+                        First Name is required.
+                    </div>
+                    <input type="text" name="last-name" id="last-name" formControlName="lname" placeholder="Last Name">
+                    <div class="text-dangerr" *ngIf="(signUpForm.get('lname').invalid)&&(formSubmitted ||nameSignUpFilled )">
+                        Last Name is required.
+                    </div>
+                    <input type="email" name="email" id="email" formControlName="email" placeholder="Email" (keyup)="checkEmail()" [ngClass]="{'is-invalid':(signUpForm.get('email').invalid)&&(formSubmitted ||nameSignUpFilled )}" required>
+                    <div class="text-dangerr" *ngIf="(signUpForm.get('email').invalid)&&(formSubmitted ||nameSignUpFilled )">
+                        Email is required.
+                    </div>
+                    <div class="text-dangerr" *ngIf="emailExist">
+                        This Email has been taken
+                    </div>
+                    <div class="text-dangerr" *ngIf="signUpForm.get('email').errors?.pattern">
+                        Enter valid email.
+                    </div>
+                    <input type="password" name="password" autocomplete="off" id="password" formControlName="password" placeholder="Password" [ngClass]="{'is-invalid':(signUpForm.get('password').invalid)&&(formSubmitted ||nameSignUpFilled )}" required>
+                    <div class="text-dangerr" *ngIf="(signUpForm.get('password').invalid)&&(formSubmitted ||nameSignUpFilled)">
+                        Password is required.
+                    </div>
+                </div>
+                <div class="signup-det">
+                    <h2>Already have account?<span (click)="openLogIn()">Login</span></h2>
+                </div>
+                <button class="next" type="submit" (click)="signUpNameComplete()">Next</button>
+            </div>
+        </div>
+
+        <!--Sign up Mobile-->
+        <div *ngIf="signUpMobileFlag">
+            <div class="signup-form">
+                <p>Enter Phone</p>
+                <div class="signup-inp">
+                    <input type="text" name="txtInput" id="bar" formControlName="mobileNumber" placeholder="Example: (xxx)-xxx-xxxx" [ngClass]="{'is-invalid':(signUpForm.get('mobileNumber').invalid)&&(formSubmitted)}" required onkeydown="javascript:backspacerDOWN(this,event);"
+                        onkeyup="javascript:backspacerUP(this,event);">
+
+                    <div class="text-dangerr" *ngIf="emptymobileFlag">
+                        Mobile number is required.
+                    </div>
+                    <div class="text-dangerr" *ngIf="alreadyregisterFlag">
+                        Mobile number is Already registered
+                    </div>
+                    <div class="text-dangerr" *ngIf="addvalidnumFlag">
+                        Invalid mobile number
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="previous" type="submit" (click)="signUpMobilePrevious()"> <span></span>
+                        Previous</button>
+                </div>
+
+                <div class="col-md-6">
+                    <button class="next" type="submit" (click)="signUpMobileComplete()">Get Code</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Sign up conformation-->
+        <div *ngIf="signUpConformationFlag">
+            <form [formGroup]="otpForm">
+
+                <div class="signup-form">
+                    <p>Confirmation Code sent to +1{{displaymob}}</p>
+                    <div class="signup-inp">
+                        <input type="text" name="otp" formControlName="otp" maxlength="4" id="otp" (change)="signUpConfirmationComplete($event.target.value)" placeholder="Enter Confirmation Code">
+                    </div>
+                    <div class="text-dangerr" *ngIf="emptyOtpFlag">
+                        Enter your otp
+                    </div>
+                    <div class="text-dangerr" *ngIf="validOtpFlag">
+                        Enter valid otp
+                    </div>
+                    <div class="text-dangerr" *ngIf="invalidOtp">
+                        Invalid OTP
+                    </div>
+                    <div class="text-dangerr" *ngIf="resenddoneFlag">
+                        OTP Resent Successfully
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <button class="previous" type="submit" (click)="signUpMobilePreviouss()"> <span></span>
+                        Previous</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="next" type="submit" (click)="signUpConfirmationComplete()">Confirm
+                        Code</button>
+                    </div>
+                </div>
+
+            </form>
+            <div class="signup-det">
+                <span *ngIf="!resendOtpFlag">Resend Code in 00 : {{addzero}}{{counter}}</span>
+                <button (click)="resend()" *ngIf="resendOtpFlag">  Resend</button>
+            </div>
+        </div>
+    </form>
+
+    <form [formGroup]="userAddres">
+        <!--Sign up Address-->
+        <div *ngIf="signUpEmailFlag">
+            <div class="signup-form">
+                <p>User Details</p>
+                <div class="signup-inp">
+                    <textarea name="address" id="address" cols="10" rows="2" formControlName="addressLine" placeholder="Address"></textarea>
+                    <div class="text-dangerr" *ngIf="addressLineFlag">
+                        Enter valid address
+                    </div>
+
+                    <input type="text" name="city" id="city" formControlName="city" placeholder="City">
+                    <div class="text-dangerr" *ngIf="cityFlag">
+                        Enter valid city
+                    </div>
+
+                    <!-- <input type="text" name="state" id="state" formControlName="state" placeholder="State"> -->
+
+                    <ng-select name="state" (change)="setstate($event)">
+                        <ng-option *ngFor="let brand of states" [value]="brand.name"><span>{{brand.abbreviation}}</span>- {{brand.name}}</ng-option>
+                    </ng-select>
+
+                    <div class="text-dangerr" *ngIf="stateFlag">
+                        Enter valid state
+                    </div>
+
+                    <input type="text" name="zip" id="zip" formControlName="zipCode" placeholder="Zip Code">
+                    <div class="text-dangerr" *ngIf="zipCodeFlag">
+                        Enter valid zipcode
+                    </div>
+
+                    <input type="text" name="message" id="message" formControlName="message" placeholder="Enter your delivery note">
+                    <div class="text-dangerr" *ngIf="deliveryflag">
+                        Enter valid delivery note
+                    </div>
+
+                </div>
+            </div>
+            <button class="next" type="submit" (click)="signUpEmailComplete()">Sign Up</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,71 @@
+.all-adv-add {
+    padding: 20px;
+}
+
+.select-brand h2 {
+    font-size: 26px;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 20px;
+}
+
+.select-brand select {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    width: 100%;
+}
+
+.select-device select {
+    padding: 10px;
+    border: 1px solid #d3d8e0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Poppins-Regular";
+    width: 100%;
+}
+
+.price-part p {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+}
+
+.price-part p span {
+    color: #ffc542;
+    margin-left: 5px;
+}
+
+.add-device-btn button {
+    border: none;
+    background-color: #ffc542;
+    font-family: "Poppins-SemiBold";
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.close-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-side button {
+    border: none;
+    background-color: transparent;
+}
+
+.ng-select span {
+    /* padding: 5px; */
+    font-family: "Poppins-Medium";
+    background-color: #cdcdcd;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 100 !important;
+    margin-right: 5px;
+}

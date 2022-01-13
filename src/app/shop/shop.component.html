@@ -1,0 +1,414 @@
+<section>
+    <div class="bg-map" *ngIf="showmapFlag">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="12" [styles]="styles">
+            <!-- <agm-marker *ngFor="let s of shop" [latitude]="s.latitude" [longitude]="s.longitude" [label]="price" [iconUrl]="shopmark.icon"></agm-marker>
+            <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="ourmark.icon"></agm-marker> -->
+            <agm-direction [origin]="origin" [destination]="destination" [markerOptions]="markerOptions1" [renderOptions]="renderOptions"></agm-direction>
+        </agm-map>
+    </div>
+    <div class="bg-map" *ngIf="filter">
+        <agm-map *ngFor="let s of shop" [latitude]="origin.lat" [longitude]="origin.lng" [zoom]="10" [styles]="styles">
+
+            <agm-direction [origin]="origin" [destination]="destination" [markerOptions]="markerOptions2" [renderOptions]="renderOptions"></agm-direction>
+
+            <!-- <agm-marker [latitude]="origin.lat" [longitude]="origin.lng" [iconUrl]="ourmark.icon"></agm-marker>
+            <agm-marker [latitude]="s.latitude" [longitude]="s.longitude" [iconUrl]="shopmark.icon"></agm-marker> -->
+        </agm-map>
+    </div>
+    <div class="filter">
+        <div class="shop-filter">
+            <div class="shop-filt-inp">
+                <input type="text" list="shops" name="mapshop" (change)="search($event.target.value)" id="shop" placeholder="Search Shop">
+                <datalist id="shops">
+                    <option *ngFor="let s of searchShoplist" value="{{s.shopName}}"><span>{{s.city}} {{s.city}} {{s.state}}</span></option>
+                  </datalist>
+                <!-- <button><img src="../../assets/images/Sliders.svg" alt=""></button> -->
+            </div>
+            <div class="shop-come">
+                <div class="shop-box" *ngFor="let store of shop">
+                    <div class="shop-ing">
+                        <img class="img-fluid" src={{store.image}} alt="">
+                    </div>
+                    <div class="shop-detail">
+                        <div class="detail-name">
+                            <h2>{{store.shopName}}</h2>
+                            <div class="cont">
+                                <ngx-star-rating class="rating" [(ngModel)]="averageRating" [id]="'rating3'" [disabled]="true"></ngx-star-rating>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>Timings: {{store.openTime}} - {{store.closeTime}}</p>
+                        </div>
+                        <div class="detail-name2">
+                            <div class="dis-f" *ngIf="distance > 0">
+                                <img src="../../assets/images/Icon awesome-car.svg" alt="">
+                                <p>{{distance}}</p>
+                            </div>
+                            <div class="dis-f">
+                                <img src="../../assets/images/Call.svg" alt="">
+                                <p>+1{{store.mobileNumber}}</p>
+                            </div>
+                        </div>
+                        <div class="shop-location">
+                            <div class="location">
+                                <img src="../../assets/images/location.svg" alt="">
+                                <div style="display: grid;">
+                                    <p>{{store.addressLine1}}</p>
+                                    <p> {{store.addressLine2}}</p>
+                                    <p> {{store.city}}, {{store.state}} - {{store.zipCode}}</p>
+                                </div>
+
+
+                            </div>
+                            <!-- <p>{{store.description}}</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blur-div">
+    </div>
+    <div class="add-product container">
+        <div class="shop-det-para" *ngFor="let store of shop">
+            <p>{{store.description}}</p>
+            <!-- <div style="text-align: center;">
+                <h6>Pricing Factors</h6>
+                <div class="row pricing-fe">
+                    <div class="col-md-3">Base Fee: <span>{{baseFee}}</span></div>
+                    <div class="col-md-3">ANO's Commission Fee: <span>{{ANOFee}}</span></div>
+                    <div class="col-md-3">Repair Shop Commission Fee: <span>{{shopCommission}}</span></div>
+                    <div class="col-md-3">Part Price Based on ANO’s Parts Lists (Price Scale)</div>
+                </div>
+            </div> -->
+        </div>
+        <!-- <div class="add-product-display">
+            <button (click)="goToCart()">Add Device To Repair</button>
+        </div> -->
+    </div>
+    <div class="search-devices">
+        <div class="container">
+            <div class="device-and-title" *ngFor="let d of display">
+                <h2>Service For <span>{{d.Device}}</span></h2>
+            </div>
+            <div class="mobile-search-drop">
+
+                <ng-select name="brand" [(ngModel)]="display[0].Device" (change)="getIssue($event)" #device1="ngModel">
+                    <ng-option *ngFor="let brand of deviceList " (change)="getIssue($event)" value="{{brand.device.id}}"><span>{{brand.device.categoryName}}</span> {{brand.device.modelName}}</ng-option>
+                </ng-select>
+
+                <!-- <input *ngFor="let s of display" type="text" list="devicelist" name="device" (change)="choosedevice($event.target.value)" id="device" value="{{s.Device}}">
+                <datalist id="devicelist">
+                    <option *ngFor="let s of deviceList" value="{{s.device.modelName}}"></option>
+
+                  </datalist> -->
+            </div>
+
+
+            <div class="all-services">
+                <div class="row">
+                    <div class="col-md-3" *ngFor="let i of issueList">
+                        <div class="service-box">
+                            <h3>{{i.problem.problemName}}</h3>
+                            <div class="price-info-e">
+                                <h3>Price: <span>${{i.TotalAmount}}</span></h3>
+                                <ng-template #HtmlContent>
+                                    <div class="pricing-fact">
+                                        <h5>Pricing Factors</h5>
+                                        <p>- Part Price Based on ANO’s Parts Lists (Price Scale) :
+                                            <span>${{i.price}}</span>
+                                        </p>
+                                        <p>- Base Fee : <span>${{i.ANOBaseFees}}</span></p>
+                                        <p>- ANO’s Commission Fee : <span>${{i.ANOCommissionFees}}</span></p>
+                                        <p>- Repair Shop Commission Fee :<span>${{i.ShopCommissionFees}} </span></p>
+
+                                    </div>
+                                </ng-template>
+                                <img [tooltip]="HtmlContent" content-type="template" placement="right" theme="light" src="../../assets/images/checkout/outline.svg" alt="">
+                            </div>
+                            <button (click)="Cart(i)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container shop-achi">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="achive">
+                    <h2>Our 8 Years of Achivements</h2>
+                <span>With our super powers we have reached this</span>
+                </div>
+            </div>
+            <div class="col-md-6 shop-record">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>5500+</h2>
+                        <p>Happy Users</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>5740+</h2>
+                        <p>Devices repaired</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>500+</h2>
+                        <p>Online Services</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>4.5</h2>
+                        <p>User rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="reviews">
+        <div class="text-center">
+            <h2>Review<span *ngIf="reviewFlag">s</span></h2>
+        </div>
+        <div class="container">
+            <div class="ratings-box">
+                <div class="row">
+                    <div class="col-md-6" style="display: grid; justify-content: center;">
+                        <div class="average-ratings">
+                            <div class="average-figure">
+                                <h2>{{averageRating}}</h2>
+                            </div>
+                            <div class="average-start">
+                                <!-- <h3 *ngIf="reviewFlag">Excellent </h3> -->
+                                <div class="average-start">
+                                    <ngx-star-rating class="rating" [(ngModel)]="averageRating" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                                </div>
+                                <h3><span>( {{ReviewCount}} Review )</span></h3>
+                            </div>
+                        </div>
+                        <div class="avg-que">
+                            <!-- <p>We believe in customer satisfaction</p> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="display: grid; justify-content: left;">
+                        <div class="star">
+                            <div class="cont">
+                                <p>Repair Service</p>
+                            </div>
+                            <div class="progres-star">
+                                <ngx-star-rating class="rating" [(ngModel)]="average_serviceRating" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                            </div>
+
+                        </div>
+                        <div class="star">
+                            <div class="cont">
+                                <p>Cost Effectiveness</p>
+                            </div>
+                            <div class="progres-star">
+                                <ngx-star-rating class="rating" [(ngModel)]="average_CostEffectivenessRating" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                            </div>
+
+                        </div>
+                        <div class="star">
+                            <div class="cont">
+                                <p>Location</p>
+                            </div>
+                            <div class="progres-star">
+                                <ngx-star-rating class="rating" [(ngModel)]="locationReview" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                            </div>
+                        </div>
+                        <div class="star">
+                            <div class="cont">
+                                <p>Customer Support</p>
+                            </div>
+                            <div class="progres-star">
+                                <ngx-star-rating class="rating" [(ngModel)]="responseReview" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-md-3">
+                    <div class="review-circle">
+                        <circle-progress [title]="averageRating" [percent]="averageCalculateRating" [radius]="100" [outerStrokeWidth]="12" [innerStrokeWidth]="5" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+                        </circle-progress>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-6">
+                    <div class="star">
+                        <div class="cont">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueFive" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                        <div class="progres-bar">
+                            <span style=" background-color: black;" [style.width.%]="fiveStarRatingBarValue"></span>
+                        </div>
+
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueFour" [id]="'starValueFour'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                        <div class="progres-bar">
+                            <span style=" background-color: black;" [style.width.%]="fourStarRatingBarValue"></span>
+                        </div>
+
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueThree" [id]="'starValueThree'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                        <div class="progres-bar">
+                            <span style=" background-color: black;" [style.width.%]="threeStarRatingBarValue"></span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueTwo" [id]="'starValueTwo'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                        <div class="progres-bar">
+                            <span style="background-color: black;" [style.width.%]="twoStarRatingBarValue"></span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueOne" [id]="'starValueOne'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                        <div class="progres-bar">
+                            <span style=" background-color: black;" [style.width.%]="oneStarRatingBarValue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="star">
+                        <div class="cont">
+                            <p>Cost Effectiveness Rating</p>
+                        </div>
+                        <div class="progres-star">
+                            <ngx-star-rating class="rating" [(ngModel)]="average_CostEffectivenessRating" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <p>Service Rating</p>
+                        </div>
+                        <div class="progres-star">
+                            <ngx-star-rating class="rating" [(ngModel)]="average_serviceRating" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+
+                    </div>
+                    <!-- <div class="star">
+                        <div class="cont">
+                            <p>Services</p>
+                        </div>
+                        <div class="progres-star">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueFive" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <p>Services</p>
+                        </div>
+                        <div class="progres-star">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueFive" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="cont">
+                            <p>Services</p>
+                        </div>
+                        <div class="progres-star">
+                            <ngx-star-rating class="rating" [(ngModel)]="starValueFive" [id]="'starValueFive'" [disabled]="true" [disabled]=true></ngx-star-rating>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="review-user">
+                <div class="ratting" *ngFor="let review of ratings">
+                    <div class="review-box">
+                        <div class="review-photo">
+                            <img src="../../assets/images/shop/comment_user_icone.png" alt="" width="50px" height="50px">
+                        </div>
+                        <div class="review-detal">
+                            <div class="review-name">
+                                <h4>{{review.user_name}}</h4>
+                                <p>{{review.created_at}}</p>
+                            </div>
+                            <h3>{{review.title}}</h3>
+                            <p>{{review.commet}}</p>
+                            <div class="review-rating">
+                                <ngx-star-rating class="rating" [(ngModel)]="review.rating" [disabled]="true" [id]="review.id" [disabled]=true></ngx-star-rating>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="rat-image">
+                        <div *ngFor="let i of review.image">
+                            <img src={{i}} alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="video">
+        <div class="container">
+            <div class="text-center ser-det" style="margin-bottom: 40px;">
+                <h2>Related Videos</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6" *ngFor="let link of videoList">
+                    <div class="youtube-video">
+                        <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(link)" width="100%" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="shop-services">
+        <div class="container">
+            <div class="text-center ser-det">
+                <h2>Other Services</h2>
+            </div>
+            <div class="service-service">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="shop-ser-box">
+                            <img class="img-fluid" src="../../assets/images/shop-service.png" alt="">
+                            <h3>Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shop-ser-box">
+                            <img class="img-fluid" src="../../assets/images/shop-service.png" alt="">
+                            <h3>Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shop-ser-box">
+                            <img class="img-fluid" src="../../assets/images/shop-service.png" alt="">
+                            <h3>Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shop-ser-box">
+                            <img class="img-fluid" src="../../assets/images/shop-service.png" alt="">
+                            <h3>Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shop-ser-box">
+                            <img class="img-fluid" src="../../assets/images/shop-service.png" alt="">
+                            <h3>Mobile</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>

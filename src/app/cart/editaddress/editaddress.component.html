@@ -1,0 +1,74 @@
+<section class="add-address">
+    <div class="container">
+        <form [formGroup]="Addaddress">
+
+            <div class="addr-title">
+                <h2>Edit Address</h2>
+            </div>
+            <div class="add-address-form">
+                <div class="form-cont">
+                    <p>First Name</p>
+                    <input type="text" formControlName="fname" [(ngModel)]="curruntAddress[0].fname" name="fname" id="fname" placeholder="First Name">
+                    <div class="text-dangerr" *ngIf="fnameflag">
+                        Enter your First Name
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>Last Name</p>
+                    <input type="text" formControlName="lname" [(ngModel)]="curruntAddress[0].lname" name="lname" id="lname" placeholder="Last Name">
+                    <div class="text-dangerr" *ngIf="lnameflag">
+                        Enter your Last Name
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>Mobile</p>
+                    <input type="text" formControlName="phoneNumber" [(ngModel)]="curruntAddress[0].phoneNumber" maxlength="13" required onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" name="mobile" id="mobile" placeholder="Mobile">
+                    <div class="text-dangerr" *ngIf="phoneNumberflag">
+                        Enter your phoneNumber
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>Address (Area and Street)</p>
+                    <input type="text" formControlName="addressLine" [(ngModel)]="curruntAddress[0].addressLine" name="address" id="address" placeholder="Add Address">
+                    <div class="text-dangerr" *ngIf="addressLineflag">
+                        Enter Your Address
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>City</p>
+                    <input type="text" formControlName="city" [(ngModel)]="curruntAddress[0].city" name="city" id="city" placeholder="Enter City">
+                    <div class="text-dangerr" *ngIf="cityflag">
+                        Enter Your City
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>State</p>
+                    <!-- <input type="text" formControlName="state" [(ngModel)]="curruntAddress[0].state" name="state" id="state" placeholder="Enter State"> -->
+                    <ng-select name="state" [(ngModel)]="curruntAddress[0].state" [ngModelOptions]="{standalone: true}" (change)="setstate($event)" #device1="ngModel">
+                        <ng-option *ngFor="let brand of states" [value]="brand.name" (change)="setstate($event)"><span>{{brand.abbreviation}}</span>- {{brand.name}}</ng-option>
+                    </ng-select>
+                    <div class="text-dangerr" *ngIf="stateflag">
+                        Enter Your State
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>Zip Code</p>
+                    <input type="number" formControlName="zipCode" name="zip" id="zip" placeholder="Enter Zip Code">
+                    <div class="text-dangerr" *ngIf="zipCodeflag">
+                        Enter your Zipcode
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <p>Add your delivery note</p>
+                    <input type="text" formControlName="message" name="message" id="message" placeholder="Enter your delivery note">
+
+                </div>
+            </div>
+
+            <div class="profile-save">
+                <button class="cancle-btn" (click)="Cancel()">Cancel</button>
+                <button class="save-btn" (click)="address()">Save</button>
+            </div>
+        </form>
+    </div>
+</section>

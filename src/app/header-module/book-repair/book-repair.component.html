@@ -1,0 +1,111 @@
+<div class="container">
+    <form #Repair="ngForm">
+        <div *ngIf="selectBrandFlag">
+            <div class="select-brand">
+                <div class="close-side">
+                    <h2>Select Device</h2>
+                    <button><img (click)="close()" src="../../../assets/images/close.svg" alt=""></button>
+                </div>
+                <p>Device Name</p>
+                <div>
+                    <ng-select name="brand" [(ngModel)]="bookRepair.device" [searchable]="true" (keyup)="change($event.target.value)" (change)="getIssueList()" #device1="ngModel" [ngClass]="{
+            'is-invalid':
+            device1.invalid &&
+            (formSubmitted || device1.touched) 
+            }">
+                        <ng-option *ngFor="let brand of deviceList" (change)="getIssueList($event)" [value]="brand.id"><span>{{brand.categoryName}}</span> {{brand.modelName}}</ng-option>
+                        <ng-option *ngIf="emptydeviceflag" [value]="nofound" [disabled]="true"><span>DNF</span>Device Not found</ng-option>
+                    </ng-select>
+
+                    <div class="text-dangerr" *ngIf="deviceFlag">
+                        Select Device
+                    </div>
+                </div>
+                <div class="search-icon">
+                    <img src="../../../assets/images/search.svg" alt="">
+                </div>
+
+
+                <div class="skipdevice">
+                    <p (click)="nearby()">Skip and View All Stores</p>
+                </div>
+
+                <div class="sub-btn">
+                    <div class="previous">
+                        <button>
+                            < Previous</button>
+                    </div>
+                    <div class="next">
+                        <button (click)="goToDevice()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Select Device-->
+
+
+        <!-- important
+        <div *ngIf="selectDeviceFlag">
+            <div class="select-device">
+                <div class="close-side">
+                    <h2>Select Problem</h2>
+                    <button><img (click)="close()" src="../../../assets/images/close.svg" alt=""></button>
+                </div>
+                <p>Issue</p>
+
+                <div>
+                    <ng-select name="device" [(ngModel)]="bookRepair.problem" (change)="IssueList($event)" #device1="ngModel" [ngClass]="{
+            'is-invalid':
+            device1.invalid &&
+            (formSubmitted || device1.touched) 
+            }">
+                        <ng-option *ngFor="let device of issueList" [value]="device.id">{{device.problemName}}</ng-option>
+                    </ng-select>
+
+                    <div class="oinput" *ngIf="othernameFlag">
+                        <input type="text" (keyup)=otherproblem($event.target.value) name="device" id="device" placeholder="Enter your other Problem">
+
+                    </div>
+                    <div class="text-dangerr" *ngIf="problemFlag">
+                        Select Problem.
+                    </div>
+                </div>
+                <div class="sub-btn">
+                    <div class="previou">
+                        <button (click)="goToBrand()">
+                            < Previous</button>
+                    </div>
+                    <div class="next">
+                        <button (click)="addRepair(Repair)">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+important -->
+
+
+        <!--Select Issues-->
+        <!-- <div *ngIf="selectIssueFlag">
+            <div class="select-problem">
+                <h2>{{selectedDeviceName}}</h2>
+                <p>PROBLEM</p>
+                <div class="optionselect">
+                    <select class="custom" name="problem" [(ngModel)]="bookRepair.problem" placeholder="Select Problem">
+                        <option *ngFor="let issue of issueList" [value]="issue.problem.id">{{issue.problem.problemName}}
+                        </option>
+                    </select>
+                </div>
+                <div class="sub-btn">
+                    <div class="previou">
+                        <button (click)="goToDeviceBack()">
+                            < Previous</button>
+                    </div>
+                    <div class="next">
+                        <button (click)="addRepair(Repair)">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </form>
+</div>

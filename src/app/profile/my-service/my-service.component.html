@@ -1,0 +1,76 @@
+<section class="all-services">
+    <div class="container">
+        <div class="my-service">
+            <div class="title-filter">
+                <div>
+                    <h2>My Services & Reviews</h2>
+                </div>
+                <!-- <div class="filter-opt">
+                    <p>2 items listed</p>
+                    <select name="filter" id="short-filter">
+                        <option value="sort">Sort</option>
+                        <option value="sort">Sort</option>
+                        <option value="sort">Sort</option>
+                    </select>
+                    <select name="filter" id="short-filter">
+                        <option value="sort">Filter</option>
+                        <option value="sort">Sort</option>
+                        <option value="sort">Sort</option>
+                    </select>
+                </div> -->
+            </div>
+            <hr class="title-filter-hr">
+        </div>
+        <div class="if-service-empty" *ngIf="emptyorder">
+            <img class="img-fluid" src="../../../assets/images/profile/undraw_empty_xct9 1.png" alt="">
+            <p>Get your first Service!</p>
+        </div>
+        <div class="if-service-empty" *ngIf="loader">
+            <img class="img-fluid" src="../../../assets/images/profile/Loading.gif" alt="">
+        </div>
+        <div class="all-service-display" *ngFor="let order of orderList">
+            <div class="order-id-date">
+                <h2>ID: #{{order.id}}</h2>
+                <h2>Tracking ID: {{order.trackingId}}</h2>
+
+                <h2>Created on: {{order.created_at}}</h2>
+            </div>
+            <div class="shop-service">
+                <div class="shop-deti" *ngFor="let s of order.shop_id">
+                    <img src="{{s.image}}" alt="">
+                    <h3>{{s.shopName}}</h3>
+                    <p>Total</p>
+                    <h2>$ {{order.TotalPrice}}</h2>
+                </div>
+                <div class="shop-ser" *ngFor="let product of order.orderdetails">
+                    <div class="shop-ser-box">
+                        <div class="shop-ser-box-img">
+                            <!-- <img src="{{product.image}}" alt=""> -->
+                            <img src="../../../assets/images/checkout/image 9.png" alt="">
+                        </div>
+                        <div class="shop-ser-box-det">
+                            <h2>$ {{product.price}}</h2>
+                            <p *ngFor="let p of product.problem_id">{{p.problemName}}</p>
+                            <h3 *ngFor="let d of product.device_id">{{d.modelName}}</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="review-part">
+                <p>Delivered on {{order.repairedDate}}</p>
+                <h6 *ngIf="order.isDelivered && !order.isReviewed " (click)="addreview(order)">Review Services</h6>
+                <div class="review-star-view">
+                    <div class="subm-whwn-no-star">
+                        <!-- <div class="cont">
+                            <ngx-star-rating class="rating" [(ngModel)]="rating0" [id]="'rating0'" [disabled]="true">
+                            </ngx-star-rating>
+                        </div> -->
+                    </div>
+                    <button (click)="oneOrder(order.id)">View Details > </button>
+                </div>
+            </div>
+            <hr class="end-hr">
+        </div>
+    </div>
+</section>

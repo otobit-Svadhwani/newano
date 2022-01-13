@@ -1,0 +1,56 @@
+<div class="change-pass">
+    <div class="close-side">
+        <h2>Submit Review</h2>
+        <button><img (click)="close()" src="../../../assets/images/close.svg" alt=""></button>
+    </div>
+    <form [formGroup]="form">
+
+        <div class="cont bigstar">
+            <ngx-star-rating class="rating" formControlName="rating" [(ngModel)]="rating" [id]="'rating0'" [disabled]="false"></ngx-star-rating>
+        </div>
+        <div class="text-dangerr" *ngIf="Rating">
+            Please Enter valid Title
+        </div>
+        <div class="extra-service-rating">
+            <div class="service-name">
+                <h2>Repair Service</h2>
+                <h2>Cost Effectiveness</h2>
+                <h2>Location</h2>
+                <h2>Customer Support</h2>
+            </div>
+            <div class="service-stars">
+                <div class="cont">
+                    <ngx-star-rating class="rating" formControlName="ServiceReview" [id]="'rating1'" [disabled]="false"></ngx-star-rating>
+                </div>
+                <div class="cont">
+                    <ngx-star-rating class="rating" formControlName="CostEffectiveness" [id]="'rating2'" [disabled]="false"></ngx-star-rating>
+                </div>
+                <div class="cont">
+                    <ngx-star-rating class="rating" formControlName="locationReview" [id]="'rating4'" [disabled]="false"></ngx-star-rating>
+                </div>
+                <div class="cont">
+                    <ngx-star-rating class="rating" formControlName="responseReview" [id]="'rating3'" [disabled]="false"></ngx-star-rating>
+                </div>
+            </div>
+        </div>
+        <div class="login-form">
+            <input type="text" name="old-password" formControlName="title" id="old-password" placeholder="Add Title">
+            <div class="text-dangerr" *ngIf="Title">
+                Please Enter valid Title
+            </div>
+        </div>
+        <div class="login-form">
+            <textarea name="comment" id="comment" formControlName="commet" cols="10" rows="2" placeholder="Your Comment..."></textarea>
+            <div class="text-dangerr" *ngIf="Comment">
+                Please Enter Valid Comment
+            </div>
+        </div>
+
+        <div>
+            <input type="file" id="myFile" (change)="onSelect($event)" name="filename" multiple>
+        </div>
+        <div class="submit-btn">
+            <button (click)=submit()>Submit</button>
+        </div>
+    </form>
+</div>

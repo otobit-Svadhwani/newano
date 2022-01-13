@@ -1,0 +1,29 @@
+<section class="select-address">
+    <div class="container">
+        <div class="sec-add" *ngFor="let a of Addressdata">
+            <div class="radio">
+                <input type="radio" id="{{a.id}}" value="{{a.id}}" (change)=select(a) name="adress">
+                <label for="{{a.id}}" class="radio-label nane-add-phone">
+                    <div>
+                        <h2>{{a.fname}} {{a.lname}} </h2>
+                        <p>{{a.addressLine}} {{a.city}} {{a.state}} {{a.zipCode}}</p>
+                    </div>
+                    <div>
+                        <p>{{a.phoneNumber}}</p>
+                    </div>
+                </label>
+                <div class="edit-address">
+                    <button (click)="editaddress(a)"><img src="../../assets/images/edit-yellow.svg" alt="">
+                        Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="add-addr">
+            <button (click)="Addadress()">Add New Address</button>
+        </div>
+        <div class="profile-save">
+            <button class="cancel-btn" (click)="Cancel()">Cancel</button>
+            <button class="save-btn" (click)="Save()">Save</button>
+        </div>
+    </div>
+</section>

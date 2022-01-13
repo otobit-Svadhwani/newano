@@ -1,0 +1,154 @@
+<section class="about-ano" id="top">
+    <div class="about-banner container">
+        <img class="img-fluid" src="../../assets/images/about/ano-banner-min.png" alt="">
+    </div>
+    <div class="aboutus container">
+        <div class="aboutus-title">
+            <div class="backdrop fire">
+                <p class="text fire">About Us</p>
+                <div class="fire"></div>
+            </div>
+        </div>
+        <div class="about-para">
+            <p>We are a cell phone repair network that serves the Manchester. Our technicians have over years of the cumulative handset and laptop repair experience. ANO was established with a single goal in mind to provide customers with inexpensive, reliable,
+                and truthful repair to their devices. Our technicians have just what you require: skilled, local fixes at reasonable costs, as well as a complimentary smile on all work. </p>
+        </div>
+    </div>
+    <!-- <div class="vision container">
+        <div class="aboutus-title">
+            <div class="backdrop fire">
+                <p class="text fire">Our Vision</p>
+                <div class="fire"></div>
+            </div>
+        </div>
+        <div class="about-para">
+            <p>We strive to repair all flaws in your smartphones and tablets. Our vision is to offer top-of-the-line premium service and goods to all of our respected customers. We collaborate together with our vendors and manufacturers to ensure that we
+                can deliver the highest level of efficiency and loyalty to all of our customers.</p>
+        </div>
+    </div> -->
+    <div class="leader container">
+        <div class="leader-title">
+            <div class="backdrop fire">
+                <p class="text fire">Our Leadership</p>
+                <div class="fire"></div>
+            </div>
+        </div>
+        <div class="leader-pra">
+            <p>Our leaders believe in extensive training of technicians, and they sustain an attitude of continuous learning, because no system is too modern, and no technology is too complex. </p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="leader-info">
+                        <div class="leader-img">
+                            <img src="../../assets/images/about/leader-img.png" alt="">
+                        </div>
+                        <div class="leader-name">
+                            <h2>Andry Ford</h2>
+                            <p>CEO at Whatever</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="leader-info">
+                        <div class="leader-img">
+                            <img src="../../assets/images/about/leader-img.png" alt="">
+                        </div>
+                        <div class="leader-name">
+                            <h2>Andry Ford</h2>
+                            <p>CEO at Whatever</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="leader-info">
+                        <div class="leader-img">
+                            <img src="../../assets/images/about/leader-img.png" alt="">
+                        </div>
+                        <div class="leader-name">
+                            <h2>Andry Ford</h2>
+                            <p>CEO at Whatever</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="leader-info">
+                        <div class="leader-img">
+                            <img src="../../assets/images/about/leader-img.png" alt="">
+                        </div>
+                        <div class="leader-name">
+                            <h2>Andry Ford</h2>
+                            <p>CEO at Whatever</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="access container">
+        <div class="access-title">
+            <div class="backdrop fire">
+                <p class="text fire">Our Accessories</p>
+                <div class="fire"></div>
+            </div>
+            <div class="comingsoon">
+                <img class="img-fluid" src="../../assets/images/about/coming.svg" alt="">
+            </div>
+        </div>
+        <div class="access-display">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="display-acc">
+                        <img src="../../assets/images/about/Image 4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="display-acc">
+                        <img src="../../assets/images/about/Image 4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="display-acc">
+                        <img src="../../assets/images/about/Image 4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="display-acc">
+                        <img src="../../assets/images/about/Image 4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="display-acc">
+                        <img src="../../assets/images/about/Image 4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="display-acc">
+                        <img src="../../assets/images/about/Image 4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback container">
+        <div class="feedback-title">
+            <div class="backdrop fire">
+                <p class="text fire">Feedback</p>
+                <div class="fire"></div>
+            </div>
+        </div>
+        <div class="feedback-para">
+            <p>If you are satisfied with your quote, please review us to do better with the repairs.</p>
+            <p>"Our mission is to provide a service that you can like and use on a daily basis." This is why we actively evaluate customer feedback in order to better. </p>
+        </div>
+        <form [formGroup]="feedback">
+            <div class="feedback-input">
+                <textarea name="feedback" id="feedback" formControlName="body" cols="10" rows="2" placeholder="Your Feedback..."></textarea>
+                <div class="text-dangerr" *ngIf="bodyempty">
+                    Enter your Msg
+                </div>
+                <button (click)="Submit()">
+                    <!-- <img src="../../assets/images/checkout/send.svg" alt=""> -->
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>

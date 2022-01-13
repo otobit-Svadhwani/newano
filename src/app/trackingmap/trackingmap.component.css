@@ -1,0 +1,168 @@
+.track-map {
+  margin-top: -30px;
+}
+
+.bg-map,
+agm-map {
+  height: 100vh;
+  width: 100%;
+}
+
+.shopdetail {
+  position: absolute;
+  top: 48px;
+  padding: 20px;
+  padding-top: 70px;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.booking-detail {
+  display: flex;
+}
+
+.booking-shop {
+  height: 160px;
+  margin-right: 15px;
+}
+
+.booking-shop-img img {
+  height: 60px;
+  width: auto;
+}
+
+.booking-shop-img h2 {
+  font-size: 12px;
+  font-family: "Poppins-SemiBold";
+  margin-top: 10px;
+}
+
+.booking-sho-price p {
+  font-size: 10px;
+  font-family: "Poppins-Regular";
+}
+
+.booking-sho-price h2 {
+  font-size: 30px;
+  font-family: "Poppins-SemiBold";
+}
+
+.booking-device {
+  height: 160px;
+}
+
+.booking-device-box {
+  background: #fff3d9;
+  padding: 20px;
+  height: 100%;
+  border-radius: 5px;
+  display: grid;
+  align-items: flex-end;
+}
+
+.booking-device-box p {
+  font-size: 10px;
+  margin-bottom: 5px;
+  font-family: "Poppins-Regular";
+}
+
+.booking-device-box p span {
+  margin-left: 5px;
+  font-family: "Poppins-SemiBold";
+}
+
+.booking-date h2 {
+  font-family: "Poppins-SemiBold";
+  font-size: 18px;
+}
+
+.destroy-system {
+  margin-top: 20px;
+  display: flex;
+}
+
+.destroy-system-box {
+  padding: 10px;
+}
+
+.destroy-system-img {
+  height: 120px;
+  width: auto;
+}
+
+.destroy-system-img img {
+  height: 120px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.destroy-system-det h2 {
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-family: "Poppins-Medium";
+}
+
+.destroy-system-det p {
+  font-size: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: "Poppins-Medium";
+}
+
+.track-view-box {
+  display: flex;
+  height: 65px;
+}
+
+.track-view-box h3 {
+  font-size: 15px;
+  margin-left: 20px;
+  border-bottom: 1px solid #484848;
+  width: 300px;
+  font-family: "Poppins-Regular";
+  height: 35px;
+}
+
+.track-view-address {
+  display: flex;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  width: 350px;
+  margin-left: -10px;
+  margin-top: -20px;
+  height: 60px;
+}
+
+.track-view-address h3 {
+  font-size: 15px;
+  margin-left: 20px;
+  width: 300px;
+  font-family: "Poppins-Regular";
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+
+.loc-none {
+  height: 20px;
+  width: auto;
+  position: relative;
+  top: 10px;
+}
+
+.locc-line {
+  height: 60px;
+  width: auto;
+  position: relative;
+  top: -30px;
+  z-index: 99;
+}
+
+.locc-final {
+  height: 60px;
+  width: auto;
+  position: relative;
+  top: -32px;
+}

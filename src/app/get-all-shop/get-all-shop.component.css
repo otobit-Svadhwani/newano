@@ -1,0 +1,389 @@
+.map-booking {
+    margin-top: -15px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 78%;
+    height: 45px;
+}
+
+.shop-filter {
+    background: transparent;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 0 6px 60px #2b2e2a; */
+    padding: 20px;
+    height: 80vh;
+    width: 28%;
+    margin-top: -41px;
+    padding-top: 50px;
+}
+
+.shop-filter input {
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+    padding: 10px;
+    height: 45px;
+    width: 100%;
+}
+
+.shop-location p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.shop-filter button {
+    border: none;
+    background-color: #000;
+    height: 45px;
+    width: 45px;
+    margin-left: 8px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.shop-filter img {
+    height: 25px;
+    width: 25px;
+}
+
+.search-location {
+    width: 70%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.search-location input {
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    height: 45px;
+}
+
+.search-location button {
+    border: none;
+    background-color: transparent;
+    height: 45px;
+    position: relative;
+    left: -40px;
+}
+
+.shop-come {
+    padding-bottom: 30px;
+    display: grid;
+    justify-content: center;
+}
+
+.search-location img {
+    height: 25px;
+    width: 25px;
+}
+
+.location {
+    display: flex;
+    align-items: baseline;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.location p {
+    margin-bottom: 0px;
+    font-family: "Poppins-Regular";
+    margin-left: 5px;
+}
+
+.bg-map,
+agm-map {
+    height: 80vh;
+    width: 100%;
+}
+
+.shop-box {
+    padding: 5px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    box-shadow: 0 0 11px #cfd1d3;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.shop-ing img {
+    height: 190px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.shop-img img {
+    height: 160px !important;
+    width: 100% !important;
+    box-shadow: 0 0 11px #e9e9e9 !important;
+    border-radius: 10px;
+}
+
+.shop-detail .detail-name {
+    /* display: flex; */
+    align-items: baseline;
+}
+
+.shop-detail .detail-name h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+.address {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.bg-map button {
+    border: none;
+    background-color: transparent;
+}
+
+.bg-map p {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.dis-f {
+    display: flex;
+    align-items: baseline;
+    margin-right: 20px;
+}
+
+.shop-detail {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.shop-detail img {
+    height: 13px;
+}
+
+.detail-name2 p {
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+
+.top-shop {
+    margin-top: 40px;
+    font-family: "Poppins-SemiBold";
+}
+
+.expe {
+    margin-top: 40px;
+}
+
+.experience {
+    background-color: #ffefcf;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.expe .text-center h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+}
+
+.experience-detail {
+    display: grid;
+    margin-top: 40px;
+}
+
+.experience-detail h3 {
+    font-size: 40px;
+    max-width: 500px;
+    font-family: "Poppins-SemiBold";
+}
+
+.experience-detail p {
+    font-size: 18px;
+    font-family: "Poppins-Regular";
+}
+
+.experience-detail h4 {
+    font-size: 25px;
+    max-width: 500px;
+    font-family: "Poppins-SemiBold";
+}
+
+.experience-detail .store button {
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.experience-img1 img {
+    position: relative;
+}
+
+.experience-img2 img {
+    position: relative;
+    top: 10px;
+}
+
+.shop-filt-inp {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px !important;
+}
+
+.shop-in-box {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.title-shop {
+    margin-bottom: 40px;
+}
+
+.title-shop h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+}
+
+.optionselect select {
+    font-family: "Poppins-SemiBold";
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.blur-div {
+    background: #fff;
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(10px);
+    position: relative;
+    height: 55px;
+    top: -30px;
+}
+
+.filter-popup {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 90%;
+    transition: all 1.5s ease-in-out;
+}
+
+.filter-popup h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.shop-in-box {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.title-shop {
+    margin-bottom: 40px;
+}
+
+.title-shop h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 30px;
+}
+
+.filter-popup p {
+    font-family: "Poppins-SemiBold";
+    font-size: 10px;
+    margin-bottom: 0px;
+    color: #ffc542;
+}
+
+.filter-popup-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.filter-popup-btn button {
+    font-family: "Poppins-SemiBold";
+    border: none;
+    background-color: #ffc542;
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    margin-right: 10px;
+}
+
+.cont {
+    display: flex;
+}
+
+.shop-box-carousel {
+    padding: 5px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.select-problem {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.select-problem h3 {
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 7px;
+}
+
+.select-device {
+    font-family: "Poppins-SemiBold";
+    background-color: #000000;
+    border-radius: 5px;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.select-issue {
+    font-family: "Poppins-SemiBold";
+    background-color: #000000;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.review-photo img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+}
+
+@media only screen and (max-width: 415px) {
+    .experience-img1 {
+        border-top: 2px solid #000;
+        margin-top: 20px;
+    }
+}
